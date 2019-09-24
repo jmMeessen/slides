@@ -1,9 +1,9 @@
 [%notitle]
-= Tests slides
+= Jenkins World (Europe)
 include::./attributes.adoc[]
 
 [{invert}]
-== Tests slides
+== Jenkins World (Europe)
 
 pour CLI, containers et clusters
 
