@@ -1,9 +1,9 @@
 [%notitle]
-= Jenkins World (Europe)
+= Automating Jenkins (re)installation: some thoughts, tips, and tricks
 include::./attributes.adoc[]
 
 [{invert}]
-== Jenkins World (Europe)
+== Automating Jenkins (re)installation: some thoughts, tips, and tricks
 
 pour CLI, containers et clusters
 
