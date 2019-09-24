@@ -1,8 +1,8 @@
 {
     "name": "slides",
     "version": "1.0.0",
-    "description": "Containous Presentations",
-    "repository": "https://github.com/containous/slides",
+    "description": "Jmm's presentations",
+    "repository": "https://github.com/jmMeessen/slides",
     "dependencies": {
         "highlightjs": "^9.12.0",
         "reveal.js": "3.7.0",

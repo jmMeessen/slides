@@ -1,7 +1,7 @@
 CURRENT_UID = $(shell id -u):$(shell id -g)
 DIST_DIR ?= $(CURDIR)/dist
 REPOSITORY_NAME ?= slides
-REPOSITORY_OWNER ?= dduportal
+REPOSITORY_OWNER ?= jmMeessen
 REPOSITORY_BASE_URL ?= https://github.com/$(REPOSITORY_OWNER)/$(REPOSITORY_NAME)
 
 REPOSITORY_URL = $(REPOSITORY_BASE_URL)
