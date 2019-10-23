@@ -1,6 +1,6 @@
-= Damien DUPORTAL's slides
+= Jmm's slides
 
-This repository is a framework managing all my slide deck,
+This repository is based on work done by Damien DUPORTAL (https://github.com/dduportal/slides). It is a framework managing all my slide deck,
 written in asciidoctor and rendered as HTMl and PDF using reveal.js.
 
 == How-to Work with this Presentation?
