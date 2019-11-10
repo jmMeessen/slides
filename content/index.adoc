@@ -3,9 +3,9 @@
 include::./attributes.adoc[]
 
 [{invert}]
-== Automating Jenkins (re)installation: some thoughts, tips, and tricks
+== Automating Jenkins (re)installation: 
 
-pour CLI, containers et clusters
+some thoughts, tips, and tricks
 
 // image::gdg-lille.png["GDG Lille",height=300]
 
@@ -35,11 +35,83 @@ Présentation disponible à l’URL: {presentationUrl}[{presentationUrl}]
 // image::damien.jpg[height=200]
 // //// end of Speaker Slide and Company slide
 
-== Menu
+== Who are you?
 
-* menu 1
+== What is configuration Management?
 
-* menu 2
+=== Pet vs Cattle
+
+
+=== Automation, automation, automation!
+
+[%step]
+* Frees precious time
+* Repeatable
+* Best emergency/repair tool
+* Best way to avoid any malicious modification
+
+
+=== In Source Control
+
+[%step]
+* Visibility
+* Peer review
+* History 
+* Versioned => Revertable
+
+[background-color="orange"]
+=== Why should CI/CD systems be handled as a Pet ?
+
+
+=== Automation objectives
+
+[%step]
+* Provision new CI/CD cluster (or major components)
+[%step]
+** efficiently
+** repeatably
+** consistant
+* Update the system
+** ex: change a setting, add a plugin
+
+=== Automation objectives
+
+[%step]
+* Peer-review mechanism for configuration changes
+** Keeps the audit/compliance team happy
+* Easily manage very large CI/CD cluster
+* Properly document the system
+* support CI/CD power users
+** behind the scene warranty for creativity
+
+=== Configuration Management philosophies
+
+=== Golden Image
+* in the early days
+** a lot of work to maintain
+** messy
+** "one size fits nobody"
+
+
+
+// Configuration scripting
+//     Scripts solved a lot of these problems
+//         added
+//             readability
+//             versioning
+//         first ad hoc (bash) scripting
+//         then Chef, Puppet, Ansible, etc.
+
+// * declarative
+//     Docker/Containers
+//         Golden Image new momentum
+//             very short start time
+//             image definition description files (dockerfiles)
+//         particularly adapted to the Cloud scheduler (ex K8S)
+//     But no silver bullet
+//         reality lies between
+//             generalization (general purpose images)
+//             need for fine grained customizations to adapt to the local constrains
 
 
 [{invert}]
