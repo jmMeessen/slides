@@ -2,27 +2,33 @@
 = Automating Jenkins (re)installation: some thoughts, tips, and tricks
 include::./attributes.adoc[]
 
+
+[%notitle]
+== title picture
+
+image::TitlePage-JW.jpg[canvas,size=contain]
+
 [{invert}]
 == Automating Jenkins (re)installation: 
 
 some thoughts, tips, and tricks
 
-// image::gdg-lille.png["GDG Lille",height=300]
+
 
 [.small]
-Présentation disponible à l’URL: {presentationUrl}[{presentationUrl}]
+Presentation available at: {presentationUrl}[{presentationUrl}]
 
-== Comment utiliser cette présentation ?
+// == Comment utiliser cette présentation ?
 
-* Pour naviguer, utilisez les flèches en bas à droite (ou celles de votre clavier)
-** Gauche/Droite: changer de chapitre
-** Haut/Bas: naviguer dans un chapitre
-* Pour avoir une vue globale : utiliser la touche "kbd:[o]" (pour "*Overview*")
-* Pour voir les notes de l'auteur : utilisez la touche "kbd:[s]" (pour "*Speaker* notes")
+// * Pour naviguer, utilisez les flèches en bas à droite (ou celles de votre clavier)
+// ** Gauche/Droite: changer de chapitre
+// ** Haut/Bas: naviguer dans un chapitre
+// * Pour avoir une vue globale : utiliser la touche "kbd:[o]" (pour "*Overview*")
+// * Pour voir les notes de l'auteur : utilisez la touche "kbd:[s]" (pour "*Speaker* notes")
 
 // //// Speaker Slide and Company slide
 [{invert}]
-== Whoami
+== Hello !!
 
 * Jean-Marc MEESSEN:
 // ** link:https://traefik.io/[Træfik,window=_blank]'s Developer 🥑 Advocate @
@@ -100,7 +106,7 @@ Présentation disponible à l’URL: {presentationUrl}[{presentationUrl}]
 //             readability
 //             versioning
 //         first ad hoc (bash) scripting
-//         then Chef, Puppet, Ansible, etc.
+//         then Chef, Puppet, Ansible, etc.git
 
 // * declarative
 //     Docker/Containers
