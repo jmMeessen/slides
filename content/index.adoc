@@ -121,11 +121,11 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 
 
 [{invert}]
-== Merci !
+== Thank You !
 
-link:https://twitter.com/DamienDuportal[icon:twitter[] @DamienDuportal]
+link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
 
-link:https://github.com/dduportal[icon:github[] dduportal]
+link:https://github.com/jmMeessen[icon:github[] jmMeessen]
 
 [.small]
 link:{presentationUrl}[Slides: {presentationUrl}]
