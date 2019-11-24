@@ -1,5 +1,11 @@
 = Jenkins configuration vectors
 
+{nbsp} +
+
+//https://images.app.goo.gl/2FJcGwDAmixKy7Wk7
+[.stretch]
+image::outillage.jpg[]
+
 == Direct file System manipulation
 
 [%step]

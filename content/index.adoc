@@ -33,6 +33,10 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 // image::damien.jpg[height=200]
 // //// end of Speaker Slide and Company slide
 
+== !
+
+image::fishSticks.jpg[canvas,size=contain]
+
 == Who are you?
 
 :leveloffset: +1
