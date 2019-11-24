@@ -99,25 +99,25 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 ** "one size fits nobody"
 
 
+=== Configuration Scripting
+* Scripts solved a lot of these problems
+** added
+*** readability
+*** versioning
+* At first ad hoc (bash) scripting
+* then Chef, Puppet, Ansible, etc.
 
-// Configuration scripting
-//     Scripts solved a lot of these problems
-//         added
-//             readability
-//             versioning
-//         first ad hoc (bash) scripting
-//         then Chef, Puppet, Ansible, etc.git
+=== Golden Image revisited
+* Docker/Containers
+** Golden Image new momentum
+** very short start time
+*** image definition description files (dockerfiles)
+*** particularly adapted to the Cloud scheduler (ex K8S)
 
-// * declarative
-//     Docker/Containers
-//         Golden Image new momentum
-//             very short start time
-//             image definition description files (dockerfiles)
-//         particularly adapted to the Cloud scheduler (ex K8S)
-//     But no silver bullet
-//         reality lies between
-//             generalization (general purpose images)
-//             need for fine grained customizations to adapt to the local constrains
+=== But no silver bullet
+** reality lies between
+*** generalization (general purpose images)
+*** need for fine grained customizations to adapt to the local constrains
 
 
 [{invert}]
