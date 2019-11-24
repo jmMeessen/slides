@@ -119,6 +119,52 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 *** generalization (general purpose images)
 *** need for fine grained customizations to adapt to the local constrains
 
+== Jenkins configuration vectors
+
+
+=== Direct file System manipulation
+
+[%step]
+* classical way to configure a system
+* copying/updating files on the file system (JENKINS_HOME)
+* Typical Ansible modules.
+** copy
+** template
+** lineinfile
+** xml
+
+=== File system vector: Pro
+
+* easy/natural for tools like Ansible
+
+=== File system vector: Con
+
+* lot of reverse engineering required
+* stability of these undocumented configuration is not guaranteed.
+** particularly plugins configuration
+
+
+=== Command Line Interfaces
+//         types
+//         authentication
+//         examples
+//         wich one is better
+//     Pro
+//     Con
+
+// === Groovy Scripts
+//     What is it ?
+//         how to execute
+//         sources
+//             where to find
+//     Pro
+//     Con
+
+// === (Jenkins) Configuration as Code
+//     What is it ?
+//     Pro
+//     Con
+
 
 [{invert}]
 == Thank You !
