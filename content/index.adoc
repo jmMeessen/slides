@@ -18,15 +18,7 @@ some thoughts, tips, and tricks
 [.small]
 Presentation available at: {presentationUrl}[{presentationUrl}]
 
-// == Comment utiliser cette présentation ?
 
-// * Pour naviguer, utilisez les flèches en bas à droite (ou celles de votre clavier)
-// ** Gauche/Droite: changer de chapitre
-// ** Haut/Bas: naviguer dans un chapitre
-// * Pour avoir une vue globale : utiliser la touche "kbd:[o]" (pour "*Overview*")
-// * Pour voir les notes de l'auteur : utilisez la touche "kbd:[s]" (pour "*Speaker* notes")
-
-// //// Speaker Slide and Company slide
 [{invert}]
 == Hello !!
 
@@ -43,183 +35,26 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 
 == Who are you?
 
-== What is configuration Management?
+:leveloffset: +1
 
-=== Pet vs Cattle
+// What is config management
+include::./includes/config-mgt.adoc[]
 
+// Jenkins configuration vectors
+include::./includes/config-vectors.adoc[]
 
-=== Automation, automation, automation!
+// == Common use cases
 
-[%step]
-* Frees precious time
-* Repeatable
-* Best emergency/repair tool
-* Best way to avoid any malicious modification
+// some thoughts
 
+:leveloffset: -1
 
-=== In Source Control
-
-[%step]
-* Visibility
-* Peer review
-* History 
-* Versioned => Revertable
-
-[background-color="orange"]
-=== Why should CI/CD systems be handled as a Pet ?
-
-
-=== Automation objectives
-
-[%step]
-* Provision new CI/CD cluster (or major components)
-[%step]
-** efficiently
-** repeatably
-** consistant
-* Update the system
-** ex: change a setting, add a plugin
-
-=== Automation objectives
-
-[%step]
-* Peer-review mechanism for configuration changes
-** Keeps the audit/compliance team happy
-* Easily manage very large CI/CD cluster
-* Properly document the system
-* support CI/CD power users
-** behind the scene warranty for creativity
-
-=== Configuration Management philosophies
-
-=== Golden Image
-* in the early days
-** a lot of work to maintain
-** messy
-** "one size fits nobody"
-
-
-=== Configuration Scripting
-* Scripts solved a lot of these problems
-** added
-*** readability
-*** versioning
-* At first ad hoc (bash) scripting
-* then Chef, Puppet, Ansible, etc.
-
-=== Golden Image revisited
-* Docker/Containers
-** Golden Image new momentum
-** very short start time
-*** image definition description files (dockerfiles)
-*** particularly adapted to the Cloud scheduler (ex K8S)
-
-=== But no silver bullet
-** reality lies between
-*** generalization (general purpose images)
-*** need for fine grained customizations to adapt to the local constrains
-
-== Jenkins configuration vectors
-
-
-=== Direct file System manipulation
-
-[%step]
-* classical way to configure a system
-* copying/updating files on the file system (JENKINS_HOME)
-* Typical Ansible modules.
-** copy
-** template
-** lineinfile
-** xml
-
-=== File system vector: Pro
-
-* easy/natural for tools like Ansible
-
-=== File system vector: Con
-
-* lot of reverse engineering required
-* stability of these undocumented configuration is not guaranteed.
-** particularly plugins configuration
-
-
-=== Command Line Interfaces
-* two types
-** REST API
-** Jenkins CLI
-//         authentication
-//         examples
-//         wich one is better
-//     Pro
-//     Con
-
-=== REST API
-
-* using HTTP requests to GET, PUT, POST and DELETE data.
-
-[source,bash]
-----
-curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
-----
-
-=== REST API - CSRF protection
-* be aware of CSRF protection (should be on, isn't it?)
-** session highjacking 
-** requires a token or "crumb" when using password
-** not required when using an API Token
-
-=== REST API
-
-* To learn more:
-** https://wiki.jenkins.io/display/JENKINS/Remote+access+API
-** https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
-
-=== Jenkins CLI
-
-* Traditional way, via the `jenkins-cli.jar`
-* To list the very functions list (dependant of installed plugin):
-** view it in "Manage Jenkins -> Jenkins CLI"
-** or simply use "help" CLI command.
-
-=== Jenkins CLI - Classic
-
-[source,bash]
-----
-java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth $USERNAME:$API_token command ...
-----
-
-[source,bash]
-----
-java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
-----
-
-=== Jenkins CLI - SSH
-
-=== Jenkins CLI - More details
-
-* https://jenkins.io/doc/book/managing/cli/
-
-=== Pros & Cons
-
-=== Groovy Scripts
-
-// === Groovy Scripts
-//     What is it ?
-//         how to execute
-//         sources
-//             where to find
-//     Pro
-//     Con
-
-// === (Jenkins) Configuration as Code
-//     What is it ?
-//     Pro
-//     Con
 
 
 [{invert}]
 == Thank You !
+
+image::capt_igloo_cleaned.jpg[height=150]
 
 link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
 
