@@ -1,6 +1,25 @@
 = What is configuration Management?
 
-== Pet vs Cattle
+{nbsp} +
+
+//https://images.app.goo.gl/kJNmfkgtF1HARdG18
+
+image::question.png[height=300]
+
+
+//== Pet vs Cattle
+== !
+
+//https://images.app.goo.gl/zcKGNFwjST5a9hXP8
+[.left]
+image::hug-dog.jpg[height=300]
+
+*Pet versus Cattle*
+
+//https://images.app.goo.gl/9sU7JKYH4F6N3S9UA
+[.left]
+image::FARMS-Cow-herd-on-home-page.jpg[height=300]
+
 
 
 == Automation, automation, automation!
