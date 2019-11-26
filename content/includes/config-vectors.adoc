@@ -162,7 +162,7 @@ cat my_script.groovy | {{ CLI_command }} groovy =
 * Declarative method, yaml based
 * Loaded on reboot or with a CLI command
 
-== JCasC Example 
+== JCasC Example (LDAP cfg)
 
 [source,yaml]
 ----
@@ -179,6 +179,27 @@ jenkins:
       disableRolePrefixing: true
       groupIdStrategy: "caseInsensitive"
       userIdStrategy: "caseInsensitive"
+----
+
+== JCasC Example (JNLP agent)
+
+[source,yaml]
+----
+jenkins:
+  nodes:
+  - permanent:
+      labelString: "jnlp"
+      mode: NORMAL
+      name: "jnlp-agent"
+      remoteFS: "/home/jenkins"
+      launcher:
+        jnlp:
+          workDirSettings:
+            disabled: true
+      nodeDescription: "Agent that initiates its own connection to Jenkins"
+      retentionStrategy: "always"
+  numExecutors: 0
+
 ----
 
 == Current Status
