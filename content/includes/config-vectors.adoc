@@ -136,12 +136,55 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 
 == Groovy Scripts from the CLI
 
+{nbsp} +
+
 [source,bash]
 ----
 cat my_script.groovy | {{ CLI_command }} groovy =
 ----
 
-== (Jenkins) Configuration as Code
-//     What is it ?
-//     Pro
-//     Con
+== Docker Container
+
+[%step]
+* Can automate the configuration of some parts 
+** ex: pre-loading plugins
+* But does not solve all the problems
+* a little out of the scope of this presentation
+
+== Jenkins Configuration as Code
+
+* First developped and tested in OSS realm
+* Implementation on CloudBees product is ongoing
+
+{nbsp} +
+
+* Declarative method, yaml based
+* Loaded on reboot or with a CLI command
+
+== JCasC Example 
+
+[source,yaml]
+----
+jenkins:
+  securityRealm:
+    ldap:
+      configurations:
+      - inhibitInferRootDN: false
+        managerDN: "uid=idm,ou=Administrators,dc=example,dc=com"
+        managerPasswordSecret: "{{ ldap_admin_passw }}"
+        rootDN: "dc=example,dc=com"
+        server: "ldap://{{ full_agent_docker_dns_name }}:389"
+      disableMailAddressResolver: false
+      disableRolePrefixing: true
+      groupIdStrategy: "caseInsensitive"
+      userIdStrategy: "caseInsensitive"
+----
+
+== Current Status
+
+* In technical preview
+** Masters configuration work
+** CloudBees functionality in the works
+** Waiting for RBAC support
+* Centralized CasC management from CJOC
+
