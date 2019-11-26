@@ -1,0 +1,10 @@
+[{invert}]
+= And in Real Life?
+
+[.stretch]
+image::miracle2.jpg[]
+
+== blabla
+
+* aaaa
+* bbb

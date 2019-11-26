@@ -47,7 +47,8 @@ include::./includes/config-mgt.adoc[]
 // Jenkins configuration vectors
 include::./includes/config-vectors.adoc[]
 
-// == Common use cases
+// In real life
+include::./includes/real-life.adoc[]
 
 // some thoughts
 
