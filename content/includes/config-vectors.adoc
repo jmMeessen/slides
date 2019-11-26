@@ -81,14 +81,65 @@ java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
 
 == Jenkins CLI - SSH
 
+* A simple SSH can also be used. 
+* Requires to enable the build-in SSH server and assign a port
+** watch your firewalls and reverse proxy
+
+{nbsp} +
+
+[source,bash]
+----
+ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
+----
+
 == Jenkins CLI - More details
 
 * https://jenkins.io/doc/book/managing/cli/
 
-== Pros & Cons
+
+== Summary
+
+[%step]
+* Rich set of API
+* Easy to use in Ansible for example
+* Initial user and credential is a tough problem to solve
+** SSH authentication can be automated
+* CLI does a better job at controlling parameter
+* CLI makes blocking calls
+* CLI commands are better documented
+* Parsing results is tricky
+
+== Recommendation
+
+* Use CLI
+* Use CLI with SSH if you can (networking)
+* Consider executing commands from target host.
 
 == Groovy Scripts
 
+[%step]
+* Richest way to configure Jenkins
+** Taps into Jenkins native language 
+* Need developer skills 
+* Documentation not easy to find
+** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs
+* Make them indempotent !
+
+== How to use Groovy Script
+
+[%step]
+* via the script console
+* at startup, as init-script
+** placed in `$JENKINS_HOME/init.groovy.d/`
+** executed in lexical order
+* via the CLI
+
+== Groovy Scripts from the CLI
+
+[source,bash]
+----
+cat my_script.groovy | {{ CLI_command }} groovy =
+----
 
 == (Jenkins) Configuration as Code
 //     What is it ?
