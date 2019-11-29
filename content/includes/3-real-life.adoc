@@ -4,7 +4,7 @@
 [.stretch]
 image::miracle2.jpg[]
 
-== !
+= !
 
 * No easy way to solve bootstrapping problem
 * Very often requires manual operations 
@@ -16,7 +16,7 @@ image::miracle2.jpg[]
 
 **But Cloudbees is actively working on it**
 
-== Bootstrap strategy
+= Bootstrap strategy
 
 [.small]
 * see example on *https://github.com/jmMeessen/captains_aws_cjp*
@@ -30,7 +30,7 @@ image::miracle2.jpg[]
 . Create `init.groovy.d` directory
 . Replace the instanceID with know one (`secret.key`)
 
-== Bootstrap strategy (cont.)
+= Bootstrap strategy (cont.)
 
 [%step]
 . Add "init groovy scripts" in directory
@@ -43,7 +43,7 @@ image::miracle2.jpg[]
 . Use CLI to install plugins
 . Use CLI to execute groovy to create Client Master
 
-== Bootstrap strategy (cont.)
+= Bootstrap strategy (cont.)
 
 [%step]
 . Configure Client Master in same principle

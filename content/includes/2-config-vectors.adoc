@@ -7,7 +7,7 @@
 [.stretch]
 image::outillage.jpg[]
 
-== Direct file System manipulation
+= Direct file System manipulation
 
 [%step]
 * classical way to configure a system
@@ -18,24 +18,24 @@ image::outillage.jpg[]
 ** lineinfile
 ** xml
 
-== File system vector: Pro
+= File system vector: Pro
 
 * easy/natural for tools like Ansible
 
-== File system vector: Con
+= File system vector: Con
 
 * lot of reverse engineering required
 * stability of these undocumented configuration is not guaranteed.
 ** particularly plugins configuration
 
 
-== Command Line Interfaces
+= Command Line Interfaces
 * two types
 ** REST API
 ** Jenkins CLI
 
 
-== REST API
+= REST API
 
 * using HTTP requests to GET, PUT, POST and DELETE data.
 
@@ -44,27 +44,27 @@ image::outillage.jpg[]
 curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 ----
 
-== REST API - CSRF protection
+= REST API - CSRF protection
 * be aware of CSRF protection (should be on, isn't it?)
 ** session hijacking 
 ** requires a token or "crumb" when using password
 ** not required when using an API Token 
 *** since new token format
 
-== REST API
+= REST API
 
 * To learn more:
 ** https://wiki.jenkins.io/display/JENKINS/Remote+access+API
 ** https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
 
-== Jenkins CLI
+= Jenkins CLI
 
 * Traditional way, via the `jenkins-cli.jar`
 * To list the very functions list (dependant of installed plugin):
 ** view it in "Manage Jenkins -> Jenkins CLI"
 ** or simply use "help" CLI command.
 
-== Jenkins CLI - Classic
+= Jenkins CLI - Classic
 
 {nbsp} +
 
@@ -81,7 +81,7 @@ Much better:
 java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
 ----
 
-== Jenkins CLI - SSH
+= Jenkins CLI - SSH
 
 * A simple SSH can also be used. 
 * Requires to enable the built-in SSH server and assign a port
@@ -95,12 +95,12 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 ----
 
 
-== Jenkins CLI - More details
+= Jenkins CLI - More details
 
 * https://jenkins.io/doc/book/managing/cli/
 
 
-== Summary
+= Summary
 
 [%step]
 * Rich set of API
@@ -112,13 +112,13 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 * CLI commands are better documented
 * Parsing results is tricky
 
-== Recommendation
+= Recommendation
 
 * Use CLI
 * Use CLI with SSH if you can (networking)
 * Consider executing commands from target host.
 
-== BONUS - how to retrieve a token
+= BONUS - how to retrieve a token
 
 [source,bash]
 ----
@@ -145,7 +145,7 @@ JENKINS_TOKEN=$( \
 sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
 ----
 
-== Groovy Scripts
+= Groovy Scripts
 
 [%step]
 * Richest way to configure Jenkins
@@ -155,7 +155,7 @@ sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
 ** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs
 * Make them idempotent !
 
-== How to use Groovy Script
+= How to use Groovy Script
 
 [%step]
 * via the script console
@@ -164,7 +164,7 @@ sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
 ** executed in lexical order
 * via the CLI
 
-== Groovy Scripts from the CLI
+= Groovy Scripts from the CLI
 
 {nbsp} +
 
@@ -173,7 +173,7 @@ sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
 cat my_script.groovy | {{ CLI_command }} groovy =
 ----
 
-== Docker Container
+= Docker Container
 
 [%step]
 * Can automate the configuration of some parts 
@@ -181,7 +181,7 @@ cat my_script.groovy | {{ CLI_command }} groovy =
 * But does not solve all the problems
 * a little out of the scope of this presentation
 
-== Jenkins Configuration as Code
+= Jenkins Configuration as Code
 
 * First developed and tested in OSS realm
 * Implementation on CloudBees product is ongoing
@@ -191,7 +191,7 @@ cat my_script.groovy | {{ CLI_command }} groovy =
 * Declarative method, yaml based
 * Loaded on reboot or with a CLI command
 
-== JCasC Example (LDAP cfg)
+= JCasC Example (LDAP cfg)
 
 [source,yaml]
 ----
@@ -210,7 +210,7 @@ jenkins:
       userIdStrategy: "caseInsensitive"
 ----
 
-== JCasC Example (JNLP agent)
+= JCasC Example (JNLP agent)
 
 [source,yaml]
 ----
@@ -231,7 +231,7 @@ jenkins:
 
 ----
 
-== Current Status
+= Current Status
 
 * In technical preview
 ** Masters configuration work

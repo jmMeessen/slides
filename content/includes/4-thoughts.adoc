@@ -1,7 +1,7 @@
 [{invert}]
 = Some thoughts
 
-== Thoughts (1)
+= Thoughts (1)
 
 [%step]
 * AUTOMATE! (especially in a Cloud World)
@@ -11,7 +11,7 @@
 ** But not a reason not to start now
 
 
-== Thoughts (2)
+= Thoughts (2)
 
 [%step]
 * Exercise your system
