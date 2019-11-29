@@ -59,7 +59,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 [%step]
 * Peer-review mechanism for configuration changes
-** Keeps the audit/compliance team happy
+** Keeps the audit/compliance people happy
 * Easily manage very large CI/CD cluster
 * Properly document the system
 * support CI/CD power users
@@ -68,7 +68,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 == Configuration Management philosophies
 
 == Golden Image
-* in the early days
+* in the early days (90s and Y2K)
 ** a lot of work to maintain
 ** messy
 ** "one size fits nobody"
