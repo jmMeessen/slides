@@ -1,0 +1,26 @@
+[{invert}]
+= Some thoughts
+
+== Thoughts
+
+//[%step]
+* AUTOMATE! (especially in a Cloud World)
+* "CasC" is the way to go ... in the near future ;-) 
+* Plugins installation
+* Bootstrapping is not solved yet.
+** But not a reason not to start now
+
+
+== Thoughts
+
+[%step]
+* Exercise your system
+[%step]
+** the less used, the more painful
+** "drift" is your enemy 
+** all config changes must be done via source & automation
+** Cut the access to that administration UI
+
+* Self-Service portals...
+** very 2010
+** why not ask for a configuration PR?

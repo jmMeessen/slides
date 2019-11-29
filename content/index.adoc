@@ -30,7 +30,9 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 
 {nbsp} +
 
+[.small]
 * link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
+[.small]
 * icon:envelope[] `jmeessen@cloudbees.com`
 
 == !
@@ -51,6 +53,7 @@ include::./includes/2-config-vectors.adoc[]
 include::./includes/3-real-life.adoc[]
 
 // some thoughts
+include::./includes/4-thoughts.adoc[]
 
 :leveloffset: -1
 
