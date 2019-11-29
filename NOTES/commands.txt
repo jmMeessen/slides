@@ -1,3 +1,6 @@
+TRAVIS_TAG=jw-eu-2019 make pdf
+TRAVIS_TAG=jw-eu-2019 make serve
+=====
 token 11493537d419940ffb832911b2a8232660
 curl -X POST "ec2-18-206-150-179.compute-1.amazonaws.com/job/testProject/build" --user admin:11493537d419940ffb832911b2a8232660
 curl -s  "http://ec2-18-206-150-179.compute-1.amazonaws.com/job/testProject/lastBuild/consoleText" --user admin:11493537d419940ffb832911b2a8232660
