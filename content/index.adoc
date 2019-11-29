@@ -22,16 +22,16 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 [{invert}]
 == Hello !!
 
-* Jean-Marc MEESSEN:
-// ** link:https://traefik.io/[Træfik,window=_blank]'s Developer 🥑 Advocate @
-// link:https://containo.us/[Containous,window=_blank] and Freelancer
-// ** Former Training Engineer @ CloudBees
+{nbsp} +
 
-// * link:https://twitter.com/DamienDuportal[icon:twitter[] @DamienDuportal,window=_blank]
-// * link:https://github.com/dduportal[icon:github[] dduportal,window=_blank]
+* **Jean-Marc MEESSEN**
+** Devops Consultant @ CloudBees
+** Belgian (beer and chocolates)
 
-// image::damien.jpg[height=200]
-// //// end of Speaker Slide and Company slide
+{nbsp} +
+
+* link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
+* icon:envelope[] `jmeessen@cloudbees.com`
 
 == !
 
@@ -42,13 +42,13 @@ image::fishSticks.jpg[canvas,size=contain]
 :leveloffset: +1
 
 // What is config management
-include::./includes/config-mgt.adoc[]
+include::./includes/1-config-mgt.adoc[]
 
 // Jenkins configuration vectors
-include::./includes/config-vectors.adoc[]
+include::./includes/2-config-vectors.adoc[]
 
 // In real life
-include::./includes/real-life.adoc[]
+include::./includes/3-real-life.adoc[]
 
 // some thoughts
 
