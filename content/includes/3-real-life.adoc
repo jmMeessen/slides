@@ -7,7 +7,7 @@ image::miracle2.jpg[]
 == !
 
 * No easy way to solve bootstrapping problem
-* Very often requiers manual operations 
+* Very often requires manual operations 
 * Poorly documented / tooled
 * Practice is still historical layers
 * Not fit for the volatile K8S world
@@ -23,6 +23,7 @@ image::miracle2.jpg[]
 
 {nbsp} +
 
+[%step]
 . Install jenkins configuration file (startup option)
 .. JAVA_ARGS -> `-Djenkins.install.runSetupWizard=false`
 . Proceed with installation via package manager (`apt-get`)
@@ -31,7 +32,9 @@ image::miracle2.jpg[]
 
 == Bootstrap strategy (cont.)
 
+[%step]
 . Add "init groovy scripts" in directory
+[%step]
 .. Initial security settings 
 .. License loading script
 .. Set-URL, JNLP, and SSHD Port configuration scripts
@@ -42,6 +45,7 @@ image::miracle2.jpg[]
 
 == Bootstrap strategy (cont.)
 
+[%step]
 . Configure Client Master in same principle
 .. Add to JAVA_ARGS the connection info
 .. Configure security and initial users via init scripts

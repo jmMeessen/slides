@@ -1,9 +1,9 @@
 [{invert}]
 = Some thoughts
 
-== Thoughts
+== Thoughts (1)
 
-//[%step]
+[%step]
 * AUTOMATE! (especially in a Cloud World)
 * "CasC" is the way to go ... in the near future ;-) 
 * Plugins installation
@@ -11,7 +11,7 @@
 ** But not a reason not to start now
 
 
-== Thoughts
+== Thoughts (2)
 
 [%step]
 * Exercise your system

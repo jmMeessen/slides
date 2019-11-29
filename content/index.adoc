@@ -30,7 +30,7 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 {nbsp} +
 
 * **Jean-Marc MEESSEN**
-** Devops Consultant @ CloudBees
+** DevOps Consultant @ CloudBees
 ** Belgian (beer and chocolates)
 
 {nbsp} +
