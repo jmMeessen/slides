@@ -17,10 +17,13 @@
 * Exercise your system
 [%step]
 ** the less used, the more painful
-** "drift" is your enemy 
+** configuration "drift" is your enemy 
 ** all config changes must be done via source & automation
-** Cut the access to that administration UI
+** Cut the access to that administration UI  👈
 
+= And a last one 😉
+
+[%step]
 * Self-Service portals...
 ** very 2010
 ** why not ask for a configuration PR?

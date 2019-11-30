@@ -18,14 +18,14 @@ image::outillage.jpg[]
 ** lineinfile
 ** xml
 
-= File system vector: Pro
+= File system vector: Pro 👍
 
 * easy/natural for tools like Ansible
 
-= File system vector: Con
+= File system vector: Con 👎
 
 * lot of reverse engineering required
-* stability of these undocumented configuration is not guaranteed.
+* stability of configuration is not guaranteed.
 ** particularly plugins configuration
 
 
@@ -44,6 +44,8 @@ image::outillage.jpg[]
 curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 ----
 
+Documentation is 😧
+
 = REST API - CSRF protection
 * be aware of CSRF protection (should be on, isn't it?)
 ** session hijacking 
@@ -53,7 +55,7 @@ curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 
 = REST API
 
-* To learn more:
+* To learn more:  📖
 ** https://wiki.jenkins.io/display/JENKINS/Remote+access+API
 ** https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
 
@@ -75,15 +77,17 @@ java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth $USERNAME:$API_token comma
 
 {nbsp} +
 
-Much better:
+Much better 😃 :
 [source,bash]
 ----
 java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
 ----
 
+Can use file permission, easy to configure with Ansible
+
 = Jenkins CLI - SSH
 
-* A simple SSH can also be used. 
+* A simple SSH client can also be used. 
 * Requires to enable the built-in SSH server and assign a port
 ** watch your firewalls and reverse proxy
 
@@ -94,6 +98,7 @@ java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
 ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 ----
 
+🤔 Can solve some of the bootstrapping problem
 
 = Jenkins CLI - More details
 
@@ -108,52 +113,25 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 * Initial user and credential is a tough problem to solve
 ** SSH authentication can be automated
 * CLI does a better job at controlling parameter
-* CLI makes blocking calls
-* CLI commands are better documented
-* Parsing results is tricky
+* CLI makes synchonous calls
+* CLI commands are better documented 😇
+* Parsing results is tricky 😒
 
 = Recommendation
 
 * Use CLI
 * Use CLI with SSH if you can (networking)
-* Consider executing commands from target host.
-
-= BONUS - how to retrieve a token
-
-[source,bash]
-----
-# First thing we do is obtain a crumb from cjoc, this allows us to call the rest API without having to disable CSRF.
-JENKINS_CRUMB=$( \
-  curl --user $USERNAME:$PASSWORD \
-       --silent "$URL/cjoc/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)" \
-)
-
-# Get the JSON payload from the generateNewToken API
-JENKINS_TOKENS_JSON=$( \
-  curl --header "$JENKINS_CRUMB" \
-       --user $USERNAME:$PASSWORD \
-       --silent "$URL/cjoc/user/$USERNAME/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken" \
-       --data "newTokenName=$USERNAME" \
-)
-
-# Pulls the token out of the JSON payload.
-JENKINS_TOKEN=$( \
-  echo $JENKINS_TOKENS_JSON | jq '.data.tokenValue' \
-)
-
-# Running Sed to get trim quotes from the output and returns it.
-sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
-----
+* Consider executing commands from target host (localhost).
 
 = Groovy Scripts
 
 [%step]
 * Richest way to configure Jenkins
-** Taps into Jenkins native language 
-* Need developer skills 
+** Taps into Jenkins' native language 
+* Need developer skills 🤓
 * Documentation not easy to find
 ** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs
-* Make them idempotent !
+* Make them idempotent ! 👀
 
 = How to use Groovy Script
 
@@ -183,8 +161,8 @@ cat my_script.groovy | {{ CLI_command }} groovy =
 
 = Jenkins Configuration as Code
 
-* First developed and tested in OSS realm
-* Implementation on CloudBees product is ongoing
+* First developed in OSS realm
+* Dev for CloudBees product is ongoing
 
 {nbsp} +
 
@@ -232,10 +210,11 @@ jenkins:
 ----
 
 = Current Status
-
-* In technical preview
-** Masters configuration work
-** CloudBees functionality in the works
-** Waiting for RBAC support
+[%step]
+* In technical preview for CloudBees products
+[%step]
+** Masters configuration already works
+** CloudBees functionality actively been worked on
+** Waiting for RBAC support 😛
 * Centralized CasC management from CJOC
 

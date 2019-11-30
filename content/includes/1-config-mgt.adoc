@@ -53,7 +53,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 = Use cases
 [%step]
-* **Provision** (bootstrap) new CI/CD cluster
+* **Provision** (bootstrap) new CI/CD cluster 🐣
 * **Update** the system
 ** ex: add a new master, change a setting, add a plugin
 
@@ -71,7 +71,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 = Golden Image
 * in the early days (90s and Y2K)
-* on CDs or Tapes
+* on CDs 📀 or Tapes 📼
 ** a lot of work to maintain
 ** messy
 ** "one size fits nobody"
@@ -87,7 +87,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 = Golden Image revisited
 * EC2 AMIs (Packer)
-* Docker/Containers
+* Docker/Containers 🐳
 ** Golden Image new momentum
 ** very short start time
 *** image definition description files (dockerfiles)
