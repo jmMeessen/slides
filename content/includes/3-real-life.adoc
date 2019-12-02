@@ -13,7 +13,7 @@ image::miracle2.jpg[]
 
 [%step]
 * No easy way to solve bootstrapping problem
-* Very often requires manual operations 
+//* Very often requires manual operations 
 * Poorly documented / tooled
 * Not fit for the volatile K8S world
 
@@ -30,7 +30,7 @@ image::miracle2.jpg[]
 . Install jenkins configuration file (startup option)
 .. JAVA_ARGS -> `-Djenkins.install.runSetupWizard=false`
 . Proceed with installation via package manager (`apt-get`)
-. Create `init.groovy.d` directory
+//. Create `init.groovy.d` directory
 . Replace the instanceID with know one (`secret.key`)
 
 = Bootstrap strategy (cont.)
