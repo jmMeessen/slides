@@ -77,10 +77,12 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 
 = Groovy Scripts
 
+image::Groovy-logo.png[height=400]
+
 [%step]
-* Richest way to configure Jenkins
-* Need developer skills 🤓
-* Documentation not easy to find
+// * Richest way to configure Jenkins
+// * Need developer skills 🤓
+// * Documentation not easy to find
 * Make them idempotent ! 👀
 
 = How to use Groovy Script
@@ -88,8 +90,8 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 [%step]
 * via the script console
 * at startup, as init-script
-** placed in `$JENKINS_HOME/init.groovy.d/`
-** executed in lexical order
+// ** placed in `$JENKINS_HOME/init.groovy.d/`
+// ** executed in lexical order
 * via the CLI
 
 = Groovy Scripts from the CLI
@@ -160,8 +162,8 @@ jenkins:
 [%step]
 * In technical preview for CloudBees products
 [%step]
-** Masters configuration already works
-** CloudBees functionality actively been worked on
+// ** Masters configuration already works
+// ** CloudBees functionality actively been worked on
 ** Waiting for RBAC support 😛
 * Centralized CasC management from CJOC
 
