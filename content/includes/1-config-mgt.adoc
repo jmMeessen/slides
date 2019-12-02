@@ -25,31 +25,13 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 = Automation, automation, automation!
 
-[%step]
-* Reduces toil and frees precious time
-* Repeatable
-* Best emergency/repair tool
-* Best way to avoid any malicious modification
 
+= In Source Control!
 
-= In Source Control
-
-[%step]
-* Visibility
-* Peer review
-* History 
-* Versioned => Revertable
 
 [background-color="orange"]
-= Why should CI/CD systems be handled as a Pet ?
+= Why are CI/CD systems handled as Pet ?
 
-
-= Automation objectives
-
-* Configure Jenkins
-** efficiently
-** repeatably
-** consistantly
 
 = Use cases
 [%step]
@@ -61,40 +43,39 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 [%step]
 * Properly document the system
-* Peer-review mechanism for configuration changes
-** Keep the audit/compliance people happy
-* Easily manage very large CI/CD cluster
+** Peer-review mechanism for configuration changes
+* Scaling
 * support CI/CD power users
 ** behind the scene warranty for creativity
 
-= Configuration Management philosophies
+// = Configuration Management philosophies
 
-= Golden Image
-* in the early days (90s and Y2K)
-* on CDs 📀 or Tapes 📼
-** a lot of work to maintain
-** messy
-** "one size fits nobody"
-
-
-= Configuration Scripting
-* Scripts solved a lot of these problems
-** added
-*** readability
-*** versioning
-* At first ad hoc (bash) scripting
-* then Chef, Puppet, Ansible, etc.
-
-= Golden Image revisited
-* EC2 AMIs (Packer)
-* Docker/Containers 🐳
-** Golden Image new momentum
-** very short start time
-*** image definition description files (dockerfiles)
-*** particularly adapted to the Cloud scheduler (ex K8S)
+// = Golden Image
+// * in the early days (90s and Y2K)
+// * on CDs 📀 or Tapes 📼
+// ** a lot of work to maintain
+// ** messy
+// ** "one size fits nobody"
 
 
-= But no silver bullet
-** reality lies between
-*** generalization (general purpose images)
-*** need for fine grained customizations to adapt to the local constrains
+// = Configuration Scripting
+// * Scripts solved a lot of these problems
+// ** added
+// *** readability
+// *** versioning
+// * At first ad hoc (bash) scripting
+// * then Chef, Puppet, Ansible, etc.
+
+// = Golden Image revisited
+// * EC2 AMIs (Packer)
+// * Docker/Containers 🐳
+// ** Golden Image new momentum
+// ** very short start time
+// *** image definition description files (dockerfiles)
+// *** particularly adapted to the Cloud scheduler (ex K8S)
+
+
+// = But no silver bullet
+// ** reality lies between
+// *** generalization (general purpose images)
+// *** need for fine grained customizations to adapt to the local constrains

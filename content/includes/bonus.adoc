@@ -1,0 +1,41 @@
+= REST API documentation
+
+* To learn more:  📖
+** https://wiki.jenkins.io/display/JENKINS/Remote+access+API
+** https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
+
+= BONUS - how to retrieve a token
+
+[source,bash]
+----
+# First thing we do is obtain a crumb from cjoc, this allows us to call the rest API without having to disable CSRF.
+JENKINS_CRUMB=$( \
+  curl --user $USERNAME:$PASSWORD \
+       --silent "$URL/cjoc/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)" \
+)
+
+# Get the JSON payload from the generateNewToken API
+JENKINS_TOKENS_JSON=$( \
+  curl --header "$JENKINS_CRUMB" \
+       --user $USERNAME:$PASSWORD \
+       --silent "$URL/cjoc/user/$USERNAME/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken" \
+       --data "newTokenName=$USERNAME" \
+)
+
+# Pulls the token out of the JSON payload.
+JENKINS_TOKEN=$( \
+  echo $JENKINS_TOKENS_JSON | jq '.data.tokenValue' \
+)
+
+# Running Sed to get trim quotes from the output and returns it.
+sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
+----
+
+
+= Jenkins CLI - More details
+
+* https://jenkins.io/doc/book/managing/cli/
+
+= Groovy Scripts
+
+** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs

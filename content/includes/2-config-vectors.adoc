@@ -9,25 +9,6 @@ image::outillage.jpg[]
 
 = Direct file System manipulation
 
-[%step]
-* classical way to configure a system
-* copying/updating files on the file system (JENKINS_HOME)
-* Typical Ansible modules.
-** copy
-** template
-** lineinfile
-** xml
-
-= File system vector: Pro 👍
-
-* easy/natural for tools like Ansible
-
-= File system vector: Con 👎
-
-* lot of reverse engineering required
-* stability of configuration is not guaranteed.
-** particularly plugins configuration
-
 
 = Command Line Interfaces
 * two types
@@ -44,36 +25,12 @@ image::outillage.jpg[]
 curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 ----
 
-Documentation is 😧
 
-= REST API - CSRF protection
-* be aware of CSRF protection (should be on, isn't it?)
-** session hijacking 
-** requires a token or "crumb" when using password
-** not required when using an API Token 
-*** since new token format
-
-= REST API
-
-* To learn more:  📖
-** https://wiki.jenkins.io/display/JENKINS/Remote+access+API
-** https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients
+= REST API - use a token
 
 = Jenkins CLI
 
-* Traditional way, via the `jenkins-cli.jar`
-* To list the very functions list (dependant of installed plugin):
-** view it in "Manage Jenkins -> Jenkins CLI"
-** or simply use "help" CLI command.
-
 = Jenkins CLI - Classic
-
-{nbsp} +
-
-[source,bash]
-----
-java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth $USERNAME:$API_token command ...
-----
 
 {nbsp} +
 
@@ -83,13 +40,11 @@ Much better 😃 :
 java -jar jenkins-cli.jar -http -s $JENKINS_URL -auth @FILE command ...
 ----
 
+{nbsp} +
+
 Can use file permission, easy to configure with Ansible
 
 = Jenkins CLI - SSH
-
-* A simple SSH client can also be used. 
-* Requires to enable the built-in SSH server and assign a port
-** watch your firewalls and reverse proxy
 
 {nbsp} +
 
@@ -98,11 +53,9 @@ Can use file permission, easy to configure with Ansible
 ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 ----
 
+{nbsp} +
+
 🤔 Can solve some of the bootstrapping problem
-
-= Jenkins CLI - More details
-
-* https://jenkins.io/doc/book/managing/cli/
 
 
 = Summary
@@ -110,8 +63,6 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 [%step]
 * Rich set of API
 * Easy to use in Ansible for example
-* Initial user and credential is a tough problem to solve
-** SSH authentication can be automated
 * CLI does a better job at controlling parameter
 * CLI makes synchonous calls
 * CLI commands are better documented 😇
@@ -119,6 +70,7 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 
 = Recommendation
 
+[%step]
 * Use CLI
 * Use CLI with SSH if you can (networking)
 * Consider executing commands from target host (localhost).
@@ -127,10 +79,8 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 
 [%step]
 * Richest way to configure Jenkins
-** Taps into Jenkins' native language 
 * Need developer skills 🤓
 * Documentation not easy to find
-** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs
 * Make them idempotent ! 👀
 
 = How to use Groovy Script
@@ -153,18 +103,15 @@ cat my_script.groovy | {{ CLI_command }} groovy =
 
 = Docker Container
 
-[%step]
-* Can automate the configuration of some parts 
-** ex: pre-loading plugins
-* But does not solve all the problems
-* a little out of the scope of this presentation
+{nbsp} +
+
+image::Docker-whale.png[height=400]
 
 = Jenkins Configuration as Code
 
-* First developed in OSS realm
-* Dev for CloudBees product is ongoing
+image::JCasC.jpeg[height=350]
 
-{nbsp} +
+//{nbsp} +
 
 * Declarative method, yaml based
 * Loaded on reboot or with a CLI command

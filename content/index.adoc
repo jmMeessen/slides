@@ -44,6 +44,10 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 
 image::fishSticks.jpg[canvas,size=contain]
 
+== !
+
+video::CaptainIglo.mp4[ video, width=800, options=autoplay,poster="fishSticks.jpg"]
+
 == Who are you?
 
 :leveloffset: +1
