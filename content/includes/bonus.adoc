@@ -42,6 +42,6 @@ sed -e 's/^"//' -e 's/"$//' <<<"$JENKINS_TOKEN"
 
 ** See this link:https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins[_Knowledge Base article_,window=_blank] on how to access the javadocs
 
-= jenkins configuration as code
+= JCasC
 
 * https://github.com/jenkinsci/configuration-as-code-plugin
