@@ -4,23 +4,18 @@ REPOSITORY_NAME ?= slides
 REPOSITORY_OWNER ?= jmMeessen
 REPOSITORY_BASE_URL ?= https://github.com/$(REPOSITORY_OWNER)/$(REPOSITORY_NAME)
 
-REPOSITORY_URL = $(REPOSITORY_BASE_URL)
-PRESENTATION_URL = https://$(REPOSITORY_OWNER).github.io/$(REPOSITORY_NAME)
+### TRAVIS_BRANCH == TRAVIS_TAG when a build is triggered by a tag as per https://docs.travis-ci.com/user/environment-variables/
+ifndef TRAVIS_BRANCH
+# Running outside Travis
+TRAVIS_BRANCH = $(shell git rev-parse --abbrev-ref HEAD)
+endif
 
-ifdef TRAVIS_TAG
-REPOSITORY_URL = $(REPOSITORY_BASE_URL)/tree/$(TRAVIS_TAG)
-PRESENTATION_URL = https://$(REPOSITORY_OWNER).github.io/$(REPOSITORY_NAME)/$(TRAVIS_TAG)
-else
-ifdef TRAVIS_BRANCH
-ifneq ($(TRAVIS_BRANCH), master)
 REPOSITORY_URL = $(REPOSITORY_BASE_URL)/tree/$(TRAVIS_BRANCH)
 PRESENTATION_URL = https://$(REPOSITORY_OWNER).github.io/$(REPOSITORY_NAME)/$(TRAVIS_BRANCH)
-endif
-endif
-endif
-export PRESENTATION_URL CURRENT_UID REPOSITORY_URL REPOSITORY_BASE_URL
 
-all: clean build verify
+export PRESENTATION_URL CURRENT_UID REPOSITORY_URL REPOSITORY_BASE_URL TRAVIS_BRANCH
+
+all: clean build verify pdf
 
 # Generate documents inside a container, all *.adoc in parallel
 build: clean $(DIST_DIR)
@@ -56,6 +51,8 @@ pdf: $(DIST_DIR)/index.html
 	@docker run --rm -t \
 		-v $(DIST_DIR):/slides \
 		--user $(CURRENT_UID) \
+		--read-only=true \
+		--tmpfs=/tmp \
 		astefanutti/decktape:2.9 \
 		/slides/index.html \
 		/slides/slides.pdf \
