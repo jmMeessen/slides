@@ -26,7 +26,7 @@ curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 ----
 
 
-= REST API - use a token
+= REST API => use a token
 
 = Jenkins CLI
 
@@ -71,7 +71,7 @@ ssh -l jmm -i ~/.ssh/id_rsa -p 10200 my-jenkins-server help
 = Recommendation
 
 [%step]
-* Use CLI
+* Use CLI 
 * Use CLI with SSH if you can (networking)
 * Consider executing commands from target host (localhost).
 
@@ -90,7 +90,7 @@ image::Groovy-logo.png[height=400]
 [%step]
 * via the script console
 * at startup, as init-script
-// ** placed in `$JENKINS_HOME/init.groovy.d/`
+** placed in `$JENKINS_HOME/init.groovy.d/`
 // ** executed in lexical order
 * via the CLI
 
