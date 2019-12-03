@@ -4,7 +4,7 @@
     "description": "Jmm's presentations",
     "repository": "https://github.com/jmMeessen/slides",
     "dependencies": {
-        "highlightjs": "^9.12.0",
+        "highlight.js": "^9.16.2",
         "reveal.js": "3.8.0",
         "reveal.js-menu": "1.2.0",
         "reveal.js-toolbar": "0.2.1"
