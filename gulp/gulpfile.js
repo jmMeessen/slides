@@ -24,6 +24,7 @@ var tasks_dir_path = './tasks',
         videosSrcPath: '/app/content/videos',
         stylesSrcPath: '/app/assets/styles',
         fontSrcPath: '/app/assets/fonts',
+        scriptsSrcPath: '/app/assets/scripts',
         faviconPath: '/app/content/favicon.ico',
         distDir: '/app/dist',
         sourcesDir: '/app/content',
@@ -46,9 +47,7 @@ gulp.task('build', gulp.series(
         'images',
         'videos',
         'favicon',
-        'prepare:revealjs',
-        'prepare:highlightjs',
-        'prepare:fontawesome',
+        'prepare:dependencies',
         'styles'
     ),
     'html'
