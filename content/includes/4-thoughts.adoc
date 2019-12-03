@@ -5,8 +5,8 @@
 
 [%step]
 * AUTOMATE! (especially in a Cloud World)
-* "CasC" is the way to go ... in the near future ;-) 
-* Plugins installation
+* "CasC" is the way to go ... 
+* Plugins installation !
 * Bootstrapping is not solved yet
 ** But not a reason not to start now
 
