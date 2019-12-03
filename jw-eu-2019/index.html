@@ -40,7 +40,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section id="command_line_interfaces"><h2>Command Line Interfaces</h2><div class="ulist"><ul><li><p>two types</p><div class="ulist"><ul><li><p>REST API</p></li><li><p>Jenkins CLI</p></li></ul></div></li></ul></div></section>
 <section id="rest_api"><h2>REST API</h2><div class="ulist"><ul><li><p>using HTTP requests to GET, PUT, POST and DELETE data.</p></li></ul></div>
 <pre class="highlight listingblock"><code data-noescape class="bash language-bash">curl -X POST "&lt;jekinsURL&gt;/testProject/build" --user jmm:&lt;password|token&gt;</code></pre></section>
-<section id="rest_api_use_a_token"><h2>REST API - use a token</h2></section>
+<section id="rest_api_use_a_token"><h2>REST API &#8658; use a token</h2></section>
 <section id="jenkins_cli"><h2>Jenkins CLI</h2></section>
 <section id="jenkins_cli_classic"><h2>Jenkins CLI - Classic</h2><div class="paragraph"><p>&#160;<br></p></div>
 <div class="paragraph"><p>Much better 😃 :</p></div>
@@ -55,7 +55,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section id="recommendation"><h2>Recommendation</h2><div class="ulist"><ul><li class="fragment"><p>Use CLI</p></li><li class="fragment"><p>Use CLI with SSH if you can (networking)</p></li><li class="fragment"><p>Consider executing commands from target host (localhost).</p></li></ul></div></section>
 <section id="groovy_scripts"><h2>Groovy Scripts</h2><div class="imageblock" style=""><img src="images/Groovy-logo.png" alt="Groovy logo" height="400"></div>
 <div class="ulist"><ul><li class="fragment"><p>Make them idempotent ! 👀</p></li></ul></div></section>
-<section id="how_to_use_groovy_script"><h2>How to use Groovy Script</h2><div class="ulist"><ul><li class="fragment"><p>via the script console</p></li><li class="fragment"><p>at startup, as init-script</p></li><li class="fragment"><p>via the CLI</p></li></ul></div></section>
+<section id="how_to_use_groovy_script"><h2>How to use Groovy Script</h2><div class="ulist"><ul><li class="fragment"><p>via the script console</p></li><li class="fragment"><p>at startup, as init-script</p><div class="ulist"><ul><li><p>placed in <code>$JENKINS_HOME/init.groovy.d/</code></p></li></ul></div></li><li class="fragment"><p>via the CLI</p></li></ul></div></section>
 <section id="groovy_scripts_from_the_cli"><h2>Groovy Scripts from the CLI</h2><div class="paragraph"><p>&#160;<br></p></div>
 <pre class="highlight listingblock"><code data-noescape class="bash language-bash">cat my_script.groovy | {{ CLI_command }} groovy =</code></pre></section>
 <section id="docker_container"><h2>Docker Container</h2><div class="paragraph"><p>&#160;<br></p></div>
@@ -96,12 +96,12 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <div class="ulist"><ul><li class="fragment"><p>No easy way to solve bootstrapping problem</p></li><li class="fragment"><p>Poorly documented / tooled</p></li><li class="fragment"><p>Not fit for the volatile K8S world</p></li></ul></div></section>
 <section id="but_cloudbees_is_actively_working_on_it"><h2><strong>But Cloudbees is actively working on it</strong></h2></section>
 <section id="bootstrap_strategy"><h2>Bootstrap strategy</h2><div class="ulist small"><ul><li><p>see example on <strong><a href="https://github.com/jmMeessen/captains_aws_cjp" class="bare">https://github.com/jmMeessen/captains_aws_cjp</a></strong></p></li></ul></div>
-<div class="paragraph"><p>&#160;<br></p></div>
-<div class="olist arabic"><ol class="arabic"><li class="fragment"><p>Install jenkins configuration file (startup option)</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>JAVA_ARGS &#8594; <code>-Djenkins.install.runSetupWizard=false</code></p></li></ol></div></li><li class="fragment"><p>Proceed with installation via package manager (<code>apt-get</code>)</p></li><li class="fragment"><p>Replace the instanceID with know one (<code>secret.key</code>)</p></li></ol></div></section>
-<section id="bootstrap_strategy_cont"><h2>Bootstrap strategy (cont.)</h2><div class="olist arabic"><ol class="arabic"><li class="fragment"><p>Add "init groovy scripts" in directory</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li class="fragment"><p>Initial security settings</p></li><li class="fragment"><p>License loading script</p></li><li class="fragment"><p>Set-URL, JNLP, and SSHD Port configuration scripts</p></li><li class="fragment"><p>Create Cfg-Management user, generate key and load public key</p></li></ol></div></li><li class="fragment"><p>Restart CJOC to activate scripts</p></li><li class="fragment"><p>Use CLI to install plugins</p></li><li class="fragment"><p>Use CLI to execute groovy to create Client Master</p></li></ol></div></section>
-<section id="bootstrap_strategy_cont_2"><h2>Bootstrap strategy (cont.)</h2><div class="olist arabic"><ol class="arabic"><li class="fragment"><p>Configure Client Master in same principle</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Add to JAVA_ARGS the connection info</p></li><li><p>Configure security and initial users via init scripts</p></li><li><p>Install default plugins</p></li></ol></div></li><li class="fragment"><p>Configure JCasC environment</p></li><li class="fragment"><p>Copy definition in adequate directory</p></li><li class="fragment"><p>Use CLI to force the load of configuration</p></li></ol></div></section>
+<div class="imageblock" style=""><img src="images/bootstrap.png" alt="bootstrap" width="100%"></div></section>
+<section><div class="paragraph"><p>&#160;<br></p></div>
+<div class="imageblock" style=""><img src="images/add-master.png" alt="add master" width="100%"></div></section>
+<section id="good_to_know"><h2>Good to know</h2><div class="imageblock" style=""><img src="images/execution-order.png" alt="execution order" width="100%"></div></section>
 <section id="some_thoughts" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Some thoughts</h2></section>
-<section id="thoughts_1"><h2>Thoughts (1)</h2><div class="ulist"><ul><li class="fragment"><p>AUTOMATE! (especially in a Cloud World)</p></li><li class="fragment"><p>"CasC" is the way to go &#8230;&#8203; in the near future ;-)</p></li><li class="fragment"><p>Plugins installation</p></li><li class="fragment"><p>Bootstrapping is not solved yet</p><div class="ulist"><ul><li><p>But not a reason not to start now</p></li></ul></div></li></ul></div></section>
+<section id="thoughts_1"><h2>Thoughts (1)</h2><div class="ulist"><ul><li class="fragment"><p>AUTOMATE! (especially in a Cloud World)</p></li><li class="fragment"><p>"CasC" is the way to go &#8230;&#8203;</p></li><li class="fragment"><p>Plugins installation !</p></li><li class="fragment"><p>Bootstrapping is not solved yet</p><div class="ulist"><ul><li><p>But not a reason not to start now</p></li></ul></div></li></ul></div></section>
 <section id="thoughts_2"><h2>Thoughts (2)</h2><div class="ulist"><ul><li class="fragment"><p>Exercise your system (drift&#8230;&#8203;)</p></li><li class="fragment"><p>all config changes must be done via source &amp; automation</p></li><li class="fragment"><p>Cut the access to that administration UI  👈</p></li></ul></div></section>
 <section id="and_a_last_one"><h2>And a last one 😉</h2><div class="ulist"><ul><li class="fragment"><p>Self-Service portals&#8230;&#8203;</p><div class="ulist"><ul><li><p>very 2010</p></li><li><p>why not ask for a configuration PR?</p></li></ul></div></li></ul></div></section>
 <section id="thank_you" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Thank You !</h2><div class="imageblock" style=""><img src="images/capt_igloo_cleaned.jpg" alt="capt igloo cleaned" height="150"></div>
@@ -109,7 +109,38 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <div class="paragraph"><p><a href="https://github.com/jmMeessen"><span class="icon"><i class="fa fa-github"></i></span> jmMeessen</a></p></div>
 <div class="paragraph small"><small><a href="https://jmMeessen.github.io/slides/jw-eu-2019">Slides: https://jmMeessen.github.io/slides/jw-eu-2019</a></small></div>
 <div class="imageblock" style=""><img src="images/qrcode.png" alt="QRCode to this presentation" height="150"></div>
-<div class="paragraph small"><small><a href="https://github.com/jmMeessen/slides/tree/jw-eu-2019">Source on <span class="icon"><i class="fa fa-github"></i></span>: https://github.com/jmMeessen/slides/tree/jw-eu-2019</a></small></div></section></div></div><script src="./reveal.js/lib/js/head.min.js"></script><script src="./reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
+<div class="paragraph small"><small><a href="https://github.com/jmMeessen/slides/tree/jw-eu-2019">Source on <span class="icon"><i class="fa fa-github"></i></span>: https://github.com/jmMeessen/slides/tree/jw-eu-2019</a></small></div></section>
+<section id="bonus"><h2>Bonus</h2></section>
+<section id="rest_api_documentation"><h2>REST API documentation</h2><div class="ulist"><ul><li><p>To learn more:  📖</p><div class="ulist"><ul><li><p><a href="https://wiki.jenkins.io/display/JENKINS/Remote+access+API" class="bare">https://wiki.jenkins.io/display/JENKINS/Remote+access+API</a></p></li><li><p><a href="https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients" class="bare">https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients</a></p></li></ul></div></li></ul></div></section>
+<section id="bonus_how_to_retrieve_a_token"><h2>BONUS - how to retrieve a token</h2><pre class="highlight listingblock"><code data-noescape class="bash language-bash"># First thing we do is obtain a crumb from cjoc, this allows us to call the rest API without having to disable CSRF.
+JENKINS_CRUMB=$( \
+  curl --user $USERNAME:$PASSWORD \
+       --silent "$URL/cjoc/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)" \
+)
+
+# Get the JSON payload from the generateNewToken API
+JENKINS_TOKENS_JSON=$( \
+  curl --header "$JENKINS_CRUMB" \
+       --user $USERNAME:$PASSWORD \
+       --silent "$URL/cjoc/user/$USERNAME/descriptorByName/jenkins.security.ApiTokenProperty/generateNewToken" \
+       --data "newTokenName=$USERNAME" \
+)
+
+# Pulls the token out of the JSON payload.
+JENKINS_TOKEN=$( \
+  echo $JENKINS_TOKENS_JSON | jq '.data.tokenValue' \
+)
+
+# Running Sed to get trim quotes from the output and returns it.
+sed -e 's/^"//' -e 's/"$//' &lt;&lt;&lt;"$JENKINS_TOKEN"</code></pre></section>
+<section id="jenkins_cli_more_details"><h2>Jenkins CLI - More details</h2><div class="ulist"><ul><li><p><a href="https://jenkins.io/doc/book/managing/cli/" class="bare">https://jenkins.io/doc/book/managing/cli/</a></p></li></ul></div></section>
+<section id="groovy_scripts_2"><h2>Groovy Scripts</h2><div class="ulist"><ul><li><p>See this <a href="https://support.cloudbees.com/hc/en-us/articles/228175367-Custom-Plugins-APIs-and-Javadocs-of-CloudBees-Jenkins-Enterprise-plugins" target="_blank"><em>Knowledge Base article</em></a> on how to access the javadocs</p></li></ul></div></section>
+<section id="jcasc"><h2>JCasC</h2><div class="ulist"><ul><li><p><a href="https://github.com/jenkinsci/configuration-as-code-plugin" class="bare">https://github.com/jenkinsci/configuration-as-code-plugin</a></p></li></ul></div></section>
+<section id="bootstrap_strategy_2"><h2>Bootstrap strategy</h2><div class="ulist small"><ul><li><p>see example on <strong><a href="https://github.com/jmMeessen/captains_aws_cjp" class="bare">https://github.com/jmMeessen/captains_aws_cjp</a></strong></p></li></ul></div>
+<div class="paragraph"><p>&#160;<br></p></div>
+<div class="olist arabic"><ol class="arabic"><li><p>Install jenkins configuration file (startup option)</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>JAVA_ARGS &#8594; <code>-Djenkins.install.runSetupWizard=false</code></p></li></ol></div></li><li><p>Proceed with installation via package manager (<code>apt-get</code>)</p></li><li><p>Create <code>init.groovy.d</code> directory</p></li><li><p>Replace the instanceID with know one (<code>secret.key</code>)</p></li></ol></div></section>
+<section id="bootstrap_strategy_cont"><h2>Bootstrap strategy (cont.)</h2><div class="olist arabic"><ol class="arabic"><li><p>Add "init groovy scripts" in directory</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Initial security settings</p></li><li><p>License loading script</p></li><li><p>Set-URL, JNLP, and SSHD Port configuration scripts</p></li><li><p>Create Cfg-Management user, generate key and load public key</p></li></ol></div></li><li><p>Restart CJOC to activate scripts</p></li><li><p>Use CLI to install plugins</p></li><li><p>Use CLI to execute groovy to create Client Master</p></li></ol></div></section>
+<section id="bootstrap_strategy_cont_2"><h2>Bootstrap strategy (cont.)</h2><div class="olist arabic"><ol class="arabic"><li><p>Configure Client Master in same principle</p><div class="olist loweralpha"><ol class="loweralpha" type="a"><li><p>Add to JAVA_ARGS the connection info</p></li><li><p>Configure security and initial users via init scripts</p></li><li><p>Install default plugins</p></li></ol></div></li><li><p>Configure JCasC environment</p></li><li><p>Copy definition in adequate directory</p></li><li><p>Use CLI to force the load of configuration</p></li></ol></div></section></div></div><script src="./reveal.js/lib/js/head.min.js"></script><script src="./reveal.js/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
   if (!(slide.classList.contains('canvas') || slide.classList.contains('background'))) return;
