@@ -65,7 +65,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 [%step]
 * Properly document the system
-** Peer-review mechanism for configuration changes
+** Peer-review and auditability
 * Scaling
 * support CI/CD power users
 ** behind the scene warranty for creativity

@@ -7,7 +7,7 @@
 [.stretch]
 image::outillage.jpg[]
 
-= Direct file System manipulation
+= Direct file manipulation
 
 
 = Command Line Interfaces
