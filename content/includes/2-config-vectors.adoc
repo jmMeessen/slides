@@ -28,6 +28,12 @@ curl -X POST "<jekinsURL>/testProject/build" --user jmm:<password|token>
 
 = REST API => use a token
 
+[.notes]
+--
+* one way algo (owner is responssible to protect it)
+* Bonus -> how to retrieve programatically a token
+--
+
 = Jenkins CLI
 
 = Jenkins CLI - Classic
