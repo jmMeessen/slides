@@ -12,7 +12,7 @@ module.exports = function (gulp, plugins, current_config) {
                 .pipe(gulp.dest(revealJsDestDir + '/js/')),
             zenBurnCss = gulp.src(baseRevealJSPath + '/lib/css/zenburn.css')
                 .pipe(gulp.dest(revealJsDestDir + '/lib/css/')),
-            headMinJs = gulp.src(baseRevealJSPath + '/lib/js/head.min.js')
+            headMinJs = gulp.src(current_config.scriptsSrcPath + '/head.min.js')
                 .pipe(gulp.dest(revealJsDestDir + '/lib/js/')),
             notesJs = gulp.src(baseRevealJSPath + '/plugin/notes/notes.js')
                 .pipe(gulp.dest(revealJsDestDir + '/plugin/notes/')),
@@ -41,7 +41,7 @@ module.exports = function (gulp, plugins, current_config) {
     // so.. reusing. cf. https://github.com/hakimel/reveal.js/#dependencies
     /////////////////
     gulp.task('prepare:highlightjs', function () {
-        var highlightNodeModule = current_config.nodeModulesDir + '/highlightjs',
+        var highlightNodeModule = current_config.nodeModulesDir + '/highlight.js',
             highlightDestDir = current_config.distDir + '/reveal.js/plugin/highlight',
             highlightjsStyleRename = gulp.src(highlightNodeModule + '/styles/*.css')
                 .pipe(plugins.rename(function (path) {
@@ -49,23 +49,47 @@ module.exports = function (gulp, plugins, current_config) {
                     path.basename += ".min";
                 }))
                 .pipe(gulp.dest(highlightDestDir + '/styles/')),
-            highlightScriptMinified = gulp.src(highlightNodeModule + '/highlight.pack.min.js')
-                .pipe(plugins.rename('highlight.js'))
+            highlightScript = gulp.src(highlightNodeModule + '/lib/highlight.js')
+                // .pipe(plugins.rename('highlight.js'))
                 .pipe(gulp.dest(highlightDestDir));
 
-        return plugins.mergeStreams(highlightjsStyleRename, highlightScriptMinified);
+        return plugins.mergeStreams(highlightjsStyleRename, highlightScript);
 
     });
 
-    ////////////////////////////// Managing fontawesome and dependencies
-    gulp.task('prepare:fontawesome', function () {
+    ////////////////////////////// Managing RevelaJS Menu Plugin and dependencies
+    gulp.task('prepare:revealjs-plugins', function () {
+        var revealjsPluginsLoaderContent = '',
+            revealjsPluginsDirs = [];
 
-        var fontAwesomeCss = gulp.src(current_config.nodeModulesDir + '/font-awesome/css/**/*')
-            .pipe(gulp.dest(current_config.distDir + '/styles/'));
+        current_config.revealjsPlugins.forEach(function(revealjsPluginName) {
 
-        var fontAwesomeFonts = gulp.src(current_config.nodeModulesDir + '/font-awesome/fonts/**/*')
-            .pipe(gulp.dest(current_config.distDir + '/fonts/'));
+            // Append plugin to the loader list
+            // Note that revelajs plugins follow a naming convention for the "main" JS file.
+            revealjsPluginsLoaderContent +=
+                "{ src: 'reveal.js/plugin/" + revealjsPluginName +
+                "/" + revealjsPluginName.split("-")[1] + ".js'},\n";
 
-        return plugins.mergeStreams(fontAwesomeCss, fontAwesomeFonts);
+            revealjsPluginsDirs.push(current_config.nodeModulesDir + '/' + revealjsPluginName + '/**/*')
+
+        } );
+
+        // Write plugin list to file system
+        plugins.fs.writeFile(current_config.revealJSPluginList, revealjsPluginsLoaderContent, function() {});
+
+        // Copy plugins contents from nodes_modules
+        return gulp.src(
+            revealjsPluginsDirs,
+            {
+                base: current_config.nodeModulesDir
+            })
+            .pipe(gulp.dest(current_config.distDir + '/reveal.js/plugin/'));
     });
+
+    ////////////////////////////// Aggregating Dependencies
+    gulp.task('prepare:dependencies', gulp.parallel(
+        'prepare:revealjs',
+        'prepare:highlightjs',
+        'prepare:revealjs-plugins'
+    ));
 };

@@ -36,9 +36,9 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 {nbsp} +
 
 [.small]
-* link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
+* link:https://twitter.com/jm_meessen[+++<span class="fab fa-twitter"></span>+++ @jm_meessen]
 [.small]
-* icon:envelope[] `jmeessen@cloudbees.com`
+* +++<span class="far fa-envelope"></span>+++ `jmeessen@cloudbees.com`
 
 == !
 
@@ -73,9 +73,9 @@ include::./includes/4-thoughts.adoc[]
 
 image::capt_igloo_cleaned.jpg[height=150]
 
-link:https://twitter.com/jm_meessen[icon:twitter[] @jm_meessen]
+link:https://twitter.com/jm_meessen[+++<span class="fab fa-twitter"></span>+++ @jm_meessen]
 
-link:https://github.com/jmMeessen[icon:github[] jmMeessen]
+link:https://github.com/jmMeessen[+++<span class="fab fa-github"></span>+++ jmMeessen]
 
 [.small]
 link:{presentationUrl}[Slides: {presentationUrl}]
@@ -83,7 +83,7 @@ link:{presentationUrl}[Slides: {presentationUrl}]
 image::qrcode.png["QRCode to this presentation",height=150]
 
 [.small]
-link:{repositoryUrl}[Source on icon:github[]: {repositoryUrl}]
+link:{repositoryUrl}[Source on +++<span class="fab fa-github"></span>+++: {repositoryUrl}]
 
 :leveloffset: +1
 
@@ -91,3 +91,4 @@ link:{repositoryUrl}[Source on icon:github[]: {repositoryUrl}]
 include::./includes/bonus.adoc[]
 
 :leveloffset: -1
+
