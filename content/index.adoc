@@ -84,3 +84,11 @@ image::qrcode.png["QRCode to this presentation",height=150]
 
 [.small]
 link:{repositoryUrl}[Source on +++<span class="fab fa-github"></span>+++: {repositoryUrl}]
+
+:leveloffset: +1
+
+// Bonus
+include::./includes/bonus.adoc[]
+
+:leveloffset: -1
+

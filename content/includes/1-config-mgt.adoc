@@ -25,13 +25,35 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 = Automation, automation, automation!
 
+[.notes]
+--
+[.small]
+* reduce toil -> time
+* repeatable
+* best emergency/repare tool
+* best protection -> malicious code
+--
 
 = In Source Control!
 
+[.notes]
+--
+* visibility (Bus Factor)
+* peer review
+* history
+* revertable
+--
 
 [background-color="orange"]
 = Why are CI/CD systems handled as Pet ?
 
+[.notes]
+--
+* configure jenkins
+** efficiently
+** repeatably
+** consistantly
+--
 
 = Use cases
 [%step]
@@ -43,7 +65,7 @@ image::FARMS-Cow-herd-on-home-page.jpg[height=300]
 
 [%step]
 * Properly document the system
-** Peer-review mechanism for configuration changes
+** Peer-review and auditability
 * Scaling
 * support CI/CD power users
 ** behind the scene warranty for creativity

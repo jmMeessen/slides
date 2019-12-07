@@ -24,36 +24,14 @@ image::miracle2.jpg[]
 [.small]
 * see example on *https://github.com/jmMeessen/captains_aws_cjp*
 
+image::bootstrap.png[width=100%]
+
+= !
+
 {nbsp} +
 
-[%step]
-. Install jenkins configuration file (startup option)
-.. JAVA_ARGS -> `-Djenkins.install.runSetupWizard=false`
-. Proceed with installation via package manager (`apt-get`)
-//. Create `init.groovy.d` directory
-. Replace the instanceID with know one (`secret.key`)
+image::add-master.png[width=100%]
 
-= Bootstrap strategy (cont.)
+= Good to know
 
-[%step]
-. Add "init groovy scripts" in directory
-[%step]
-.. Initial security settings 
-.. License loading script
-.. Set-URL, JNLP, and SSHD Port configuration scripts
-.. Create Cfg-Management user, generate key and load public key
-. Restart CJOC to activate scripts
-. Use CLI to install plugins
-. Use CLI to execute groovy to create Client Master
-
-= Bootstrap strategy (cont.)
-
-[%step]
-. Configure Client Master in same principle
-.. Add to JAVA_ARGS the connection info
-.. Configure security and initial users via init scripts
-.. Install default plugins
-. Configure JCasC environment
-. Copy definition in adequate directory
-. Use CLI to force the load of configuration
-
+image::execution-order.png[width=100%]
