@@ -9,7 +9,7 @@
 .conum[data-value]:after{content:attr(data-value)}
 pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
-.conum:not([data-value]):empty{display:none}</style><link rel="stylesheet" href="styles/font-awesome.min.css"><link href="./reveal.js/plugin/highlight/styles/github.min.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
+.conum:not([data-value]):empty{display:none}</style><link href="./reveal.js/plugin/highlight/styles/github.min.css" rel="stylesheet"><script>var link = document.createElement( 'link' );
 link.rel = 'stylesheet';
 link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "./reveal.js/css/print/pdf.css" : "./reveal.js/css/print/paper.css";
@@ -20,7 +20,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section id="hello" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Hello !!</h2><div class="paragraph"><p>&#160;<br></p></div>
 <div class="ulist"><ul><li><p><strong>Jean-Marc MEESSEN</strong></p><div class="ulist"><ul><li><p>DevOps Consultant @ CloudBees</p></li><li><p>Belgian (beer and chocolates)</p></li></ul></div></li></ul></div>
 <div class="paragraph"><p>&#160;<br></p></div>
-<div class="ulist small"><ul><li><p><a href="https://twitter.com/jm_meessen"><span class="icon"><i class="fa fa-twitter"></i></span> @jm_meessen</a></p></li><li><p><span class="icon"><i class="fa fa-envelope"></i></span> <code>jmeessen@cloudbees.com</code></p></li></ul></div></section>
+<div class="ulist small"><ul><li><p><a href="https://twitter.com/jm_meessen"><span class="fab fa-twitter"></span> @jm_meessen</a></p></li><li><p><span class="far fa-envelope"></span> <code>jmeessen@cloudbees.com</code></p></li></ul></div></section>
 <section data-background-image="images/fishSticks.jpg" data-background-size="contain"></section>
 <section><div class="videoblock"><video src="images/CaptainIglo.mp4" width="800" height="100%" poster="images/fishSticks.jpg" data-autoplay controls>Your browser does not support the video tag.</video></div></section>
 <section id="who_are_you"><h2>Who are you?</h2></section>
@@ -29,18 +29,18 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section><div class="imageblock left" style=""><img src="images/hug-dog.jpg" alt="hug dog" height="300"></div>
 <div class="paragraph"><p><strong>Pet versus Cattle</strong></p></div>
 <div class="imageblock left" style=""><img src="images/FARMS-Cow-herd-on-home-page.jpg" alt="FARMS Cow herd on home page" height="300"></div></section>
-<section id="automation_automation_automation"><h2>Automation, automation, automation!</h2></section>
-<section id="in_source_control"><h2>In Source Control!</h2></section>
-<section id="why_are_cicd_systems_handled_as_pet" data-background-color="orange"><h2>Why are CI/CD systems handled as Pet ?</h2></section>
+<section id="automation_automation_automation"><h2>Automation, automation, automation!</h2><aside class="notes"><div class="ulist small"><ul><li><p>reduce toil &#8594; time</p></li><li><p>repeatable</p></li><li><p>best emergency/repare tool</p></li><li><p>best protection &#8594; malicious code</p></li></ul></div></aside></section>
+<section id="in_source_control"><h2>In Source Control!</h2><aside class="notes"><div class="ulist"><ul><li><p>visibility (Bus Factor)</p></li><li><p>peer review</p></li><li><p>history</p></li><li><p>revertable</p></li></ul></div></aside></section>
+<section id="why_are_cicd_systems_handled_as_pet" data-background-color="orange"><h2>Why are CI/CD systems handled as Pet ?</h2><aside class="notes"><div class="ulist"><ul><li><p>configure jenkins</p><div class="ulist"><ul><li><p>efficiently</p></li><li><p>repeatably</p></li><li><p>consistantly</p></li></ul></div></li></ul></div></aside></section>
 <section id="use_cases"><h2>Use cases</h2><div class="ulist"><ul><li class="fragment"><p><strong>Provision</strong> (bootstrap) new CI/CD cluster 🐣</p></li><li class="fragment"><p><strong>Update</strong> the system</p><div class="ulist"><ul><li><p>ex: add a new master, change a setting, add a plugin</p></li></ul></div></li></ul></div></section>
-<section id="other_automation_objectives"><h2>Other automation objectives</h2><div class="ulist"><ul><li class="fragment"><p>Properly document the system</p><div class="ulist"><ul><li><p>Peer-review mechanism for configuration changes</p></li></ul></div></li><li class="fragment"><p>Scaling</p></li><li class="fragment"><p>support CI/CD power users</p><div class="ulist"><ul><li><p>behind the scene warranty for creativity</p></li></ul></div></li></ul></div></section>
+<section id="other_automation_objectives"><h2>Other automation objectives</h2><div class="ulist"><ul><li class="fragment"><p>Properly document the system</p><div class="ulist"><ul><li><p>Peer-review and auditability</p></li></ul></div></li><li class="fragment"><p>Scaling</p></li><li class="fragment"><p>support CI/CD power users</p><div class="ulist"><ul><li><p>behind the scene warranty for creativity</p></li></ul></div></li></ul></div></section>
 <section id="jenkins_configuration_vectors" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Jenkins configuration vectors</h2><div class="paragraph"><p>&#160;<br></p></div>
 <div class="imageblock stretch" style=""><img src="images/outillage.jpg" alt="outillage" height="100%"></div></section>
-<section id="direct_file_system_manipulation"><h2>Direct file System manipulation</h2></section>
+<section id="direct_file_manipulation"><h2>Direct file manipulation</h2></section>
 <section id="command_line_interfaces"><h2>Command Line Interfaces</h2><div class="ulist"><ul><li><p>two types</p><div class="ulist"><ul><li><p>REST API</p></li><li><p>Jenkins CLI</p></li></ul></div></li></ul></div></section>
 <section id="rest_api"><h2>REST API</h2><div class="ulist"><ul><li><p>using HTTP requests to GET, PUT, POST and DELETE data.</p></li></ul></div>
 <pre class="highlight listingblock"><code data-noescape class="bash language-bash">curl -X POST "&lt;jekinsURL&gt;/testProject/build" --user jmm:&lt;password|token&gt;</code></pre></section>
-<section id="rest_api_use_a_token"><h2>REST API &#8658; use a token</h2></section>
+<section id="rest_api_use_a_token"><h2>REST API &#8658; use a token</h2><aside class="notes"><div class="ulist"><ul><li><p>one way algo (owner is responssible to protect it)</p></li><li><p>Bonus &#8594; how to retrieve programatically a token</p></li></ul></div></aside></section>
 <section id="jenkins_cli"><h2>Jenkins CLI</h2></section>
 <section id="jenkins_cli_classic"><h2>Jenkins CLI - Classic</h2><div class="paragraph"><p>&#160;<br></p></div>
 <div class="paragraph"><p>Much better 😃 :</p></div>
@@ -105,11 +105,11 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <section id="thoughts_2"><h2>Thoughts (2)</h2><div class="ulist"><ul><li class="fragment"><p>Exercise your system (drift&#8230;&#8203;)</p></li><li class="fragment"><p>all config changes must be done via source &amp; automation</p></li><li class="fragment"><p>Cut the access to that administration UI  👈</p></li></ul></div></section>
 <section id="and_a_last_one"><h2>And a last one 😉</h2><div class="ulist"><ul><li class="fragment"><p>Self-Service portals&#8230;&#8203;</p><div class="ulist"><ul><li><p>very 2010</p></li><li><p>why not ask for a configuration PR?</p></li></ul></div></li></ul></div></section>
 <section id="thank_you" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Thank You !</h2><div class="imageblock" style=""><img src="images/capt_igloo_cleaned.jpg" alt="capt igloo cleaned" height="150"></div>
-<div class="paragraph"><p><a href="https://twitter.com/jm_meessen"><span class="icon"><i class="fa fa-twitter"></i></span> @jm_meessen</a></p></div>
-<div class="paragraph"><p><a href="https://github.com/jmMeessen"><span class="icon"><i class="fa fa-github"></i></span> jmMeessen</a></p></div>
+<div class="paragraph"><p><a href="https://twitter.com/jm_meessen"><span class="fab fa-twitter"></span> @jm_meessen</a></p></div>
+<div class="paragraph"><p><a href="https://github.com/jmMeessen"><span class="fab fa-github"></span> jmMeessen</a></p></div>
 <div class="paragraph small"><small><a href="https://jmMeessen.github.io/slides/jw-eu-2019">Slides: https://jmMeessen.github.io/slides/jw-eu-2019</a></small></div>
 <div class="imageblock" style=""><img src="images/qrcode.png" alt="QRCode to this presentation" height="150"></div>
-<div class="paragraph small"><small><a href="https://github.com/jmMeessen/slides/tree/jw-eu-2019">Source on <span class="icon"><i class="fa fa-github"></i></span>: https://github.com/jmMeessen/slides/tree/jw-eu-2019</a></small></div></section>
+<div class="paragraph small"><small><a href="https://github.com/jmMeessen/slides/tree/jw-eu-2019">Source on <span class="fab fa-github"></span>: https://github.com/jmMeessen/slides/tree/jw-eu-2019</a></small></div></section>
 <section id="bonus"><h2>Bonus</h2></section>
 <section id="rest_api_documentation"><h2>REST API documentation</h2><div class="ulist"><ul><li><p>To learn more:  📖</p><div class="ulist"><ul><li><p><a href="https://wiki.jenkins.io/display/JENKINS/Remote+access+API" class="bare">https://wiki.jenkins.io/display/JENKINS/Remote+access+API</a></p></li><li><p><a href="https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients" class="bare">https://wiki.jenkins.io/display/JENKINS/Authenticating+scripted+clients</a></p></li></ul></div></li></ul></div></section>
 <section id="bonus_how_to_retrieve_a_token"><h2>BONUS - how to retrieve a token</h2><pre class="highlight listingblock"><code data-noescape class="bash language-bash"># First thing we do is obtain a crumb from cjoc, this allows us to call the rest API without having to disable CSRF.
@@ -265,9 +265,24 @@ Reveal.initialize({
       
       
       
-      
+      { src: 'reveal.js/plugin/reveal.js-menu/menu.js'},
+{ src: 'reveal.js/plugin/reveal.js-toolbar/toolbar.js'},
+
   ],
 
-  
+  /* tslint:disable */
+/* eslint:disable */
+
+menu: {
+    side: 'left',
+},
+toolbar: {
+    fullscreen: true,
+    overview: false, // Buggy: make the toolbar disapear
+    notes: false, // Too low value to show this
+    help: true,
+    pause: true,
+},
+
 
 });</script></body></html>
