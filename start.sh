@@ -1,1 +1,1 @@
-TRAVIS_TAG=jw-eu-2019 make serve
+TRAVIS_TAG=devoxx-fr-2022 make serve

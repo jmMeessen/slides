@@ -1,27 +1,39 @@
 [%notitle]
-= Automating Jenkins (re)installation: some thoughts, tips, and tricks
+= Gitpod
 include::./attributes.adoc[]
 
 
 [%notitle]
 == title picture
 
-image::TitlePage-JW.jpg[canvas,size=contain]
+image::devoxx22-title.png[canvas,size=contain]
 
+[%notitle]
+== Surprise
 
-== Once upon a time....
+image::interested-astonished-face-760.jpeg[canvas,size=contain]
+
+[%notitle]
+== Something happened
+
+image::SomethingHappened.jpg[canvas,size=contain]
+
+[%notitle]
+== Disappointment
+
+image::cheetah-rain.gif[canvas,size=contain]
 
 
 
 [{invert}]
-== Automating Jenkins (re)installation: 
+== Gitpod 
 
-some thoughts, tips, and tricks
+La fin des frictions inutiles pour contribuer à un projet OSS ?
 
 
 
 [.small]
-Presentation available at: {presentationUrl}[{presentationUrl}]
+Presentation disponnible sur: `{presentationUrl}[{presentationUrl}]`
 
 
 [{invert}]
@@ -30,15 +42,17 @@ Presentation available at: {presentationUrl}[{presentationUrl}]
 {nbsp} +
 
 * **Jean-Marc MEESSEN**
-** DevOps Consultant @ CloudBees
-** Belgian (beer and chocolates)
+** Belge (Bière et chocolats)
+** Jenkins Developer Relations {nbsp} {nbsp} image:jenkins_logo_small.png[height=80, role="right"] +
+Sponsored by  {nbsp} image:cloudbees-logo-full.png[height=50, float="right"]
+
 
 {nbsp} +
 
 [.small]
 * link:https://twitter.com/jm_meessen[+++<span class="fab fa-twitter"></span>+++ @jm_meessen]
 [.small]
-* +++<span class="far fa-envelope"></span>+++ `jmeessen@cloudbees.com`
+* +++<span class="far fa-envelope"></span>+++ `jean-marc@meessen-web.org`
 
 == !
 
@@ -48,24 +62,23 @@ image::fishSticks.jpg[canvas,size=contain]
 
 video::CaptainIglo.mp4[ video, width=800, options=autoplay,poster="fishSticks.jpg"]
 
-== Who are you?
 
 :leveloffset: +1
 
-// What is config management
-include::./includes/1-config-mgt.adoc[]
+include::./includes/1-difficulte-de-contribuer.adoc[]
 
-// Jenkins configuration vectors
-include::./includes/2-config-vectors.adoc[]
+include::./includes/2-gitpod.adoc[]
 
-// In real life
-include::./includes/3-real-life.adoc[]
+include::./includes/3-demo.adoc[]
 
-// some thoughts
-include::./includes/4-thoughts.adoc[]
+include::./includes/4-conclusions.adoc[]
 
 :leveloffset: -1
 
+[{invert}]
+== And before we go...
+
+image:imposterSyndrom.jpeg[]
 
 
 [{invert}]
@@ -85,10 +98,5 @@ image::qrcode.png["QRCode to this presentation",height=150]
 [.small]
 link:{repositoryUrl}[Source on +++<span class="fab fa-github"></span>+++: {repositoryUrl}]
 
-:leveloffset: +1
 
-// Bonus
-include::./includes/bonus.adoc[]
-
-:leveloffset: -1
 

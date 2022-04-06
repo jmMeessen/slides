@@ -1,0 +1,16 @@
+[{invert}]
+= De la difficulté de contribuer...
+
+{nbsp} +
+
+//https://techsnooper.io/avis-dexpert-le-libre-nattire-plus-lopen-source-est-devenu-trop-rentable-attention-danger/
+image::OSS-Ball.png[height=450]
+
+[%notitle]
+= OSS was a revolution
+
+image::newKingmakers.jpg[canvas,size=contain]
+
+= Le contributeur...
+
+image::OSS_pyramid_ideal.png[]
