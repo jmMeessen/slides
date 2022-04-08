@@ -26,10 +26,9 @@ image::cheetah-rain.gif[canvas,size=contain]
 
 
 [{invert}]
-== Gitpod 
+== Gitpod
 
 La fin des frictions inutiles pour contribuer à un projet OSS ?
-
 
 
 [.small]
@@ -50,7 +49,7 @@ Sponsored by  {nbsp} image:cloudbees-logo-full.png[height=50, float="right"]
 {nbsp} +
 
 [.small]
-* link:https://twitter.com/jm_meessen[+++<span class="fab fa-twitter"></span>+++ @jm_meessen]
+* link:https://twitter.com/JM_Meessen[+++<span class="fab fa-twitter"></span>+++ @JM_Meessen]
 [.small]
 * +++<span class="far fa-envelope"></span>+++ `jean-marc@meessen-web.org`
 
@@ -86,7 +85,7 @@ image:imposterSyndrom.jpeg[]
 
 image::capt_igloo_cleaned.jpg[height=150]
 
-link:https://twitter.com/jm_meessen[+++<span class="fab fa-twitter"></span>+++ @jm_meessen]
+link:https://twitter.com/JM_Meessen[+++<span class="fab fa-twitter"></span>+++ @JM_Meessen]
 
 link:https://github.com/jmMeessen[+++<span class="fab fa-github"></span>+++ jmMeessen]
 
@@ -97,6 +96,3 @@ image::qrcode.png["QRCode to this presentation",height=150]
 
 [.small]
 link:{repositoryUrl}[Source on +++<span class="fab fa-github"></span>+++: {repositoryUrl}]
-
-
-

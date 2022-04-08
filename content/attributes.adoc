@@ -2,7 +2,7 @@
 :allow-uri-read:
 :linkattrs:
 :idprefix:
-:imagesdir: images
+:imagesdir: media/
 :revealjsdir: ./reveal.js
 :revealjs_customtheme: ./styles/build.css
 :revealjs_history: true
@@ -19,4 +19,9 @@
 :highlightjs-main-theme: github
 :highlightjs-theme: {revealjsdir}/plugin/highlight/styles/{highlightjs-main-theme}.min.css
 :invert: state=invert,background-color="BLANCHEDALMOND"
+// Enable font awesome, and use it from local resources (instead of CDN)
+:icons: font
+:stylesdir: styles
 :notitle: true
+:revealjs_plugins: ./assets/plugins/revealjs-plugins.js
+:revealjs_plugins_configuration: ./assets/plugins/revealjs-plugins-config.js
