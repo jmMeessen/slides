@@ -2,9 +2,13 @@
 = Gitpod
 include::./attributes.adoc[]
 
+Présentation à **Devoxx France**
+
+Avril 2022
 
 [%notitle]
 == title picture
+
 
 image::devoxx22-title.png[canvas,size=contain]
 
@@ -30,6 +34,7 @@ image::cheetah-rain.gif[canvas,size=contain]
 
 La fin des frictions inutiles pour contribuer à un projet OSS ?
 
+image::qrcode.png[]
 
 [.small]
 Presentation disponnible sur: `{presentationUrl}[{presentationUrl}]`
@@ -41,7 +46,7 @@ Presentation disponnible sur: `{presentationUrl}[{presentationUrl}]`
 {nbsp} +
 
 * **Jean-Marc MEESSEN**
-** Belge (Bière et chocolats)
+** Belge (bières et chocolats)
 ** Jenkins Developer Relations {nbsp} {nbsp} image:jenkins_logo_small.png[height=80, role="right"] +
 Sponsored by  {nbsp} image:cloudbees-logo-full.png[height=50, float="right"]
 
@@ -75,13 +80,15 @@ include::./includes/4-conclusions.adoc[]
 :leveloffset: -1
 
 [{invert}]
-== And before we go...
+// == And before we go...
+== Et rappellez-vous...
 
 image:imposterSyndrom.jpeg[]
 
 
 [{invert}]
-== Thank You !
+//== Thank You !
+== Merci de votre attention !
 
 image::capt_igloo_cleaned.jpg[height=150]
 

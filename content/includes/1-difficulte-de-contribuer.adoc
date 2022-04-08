@@ -14,3 +14,7 @@ image::newKingmakers.jpg[canvas,size=contain]
 = Le contributeur...
 
 image::OSS_pyramid_ideal.png[]
+
+= La réalité...
+
+image::OSS_pyramid_reality.png[]
