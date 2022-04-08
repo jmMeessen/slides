@@ -1,1 +1,6 @@
+[%notitle]
 = Gitpod
+
+image::gitpodLogo.png[]
+
+= What is Gitpod

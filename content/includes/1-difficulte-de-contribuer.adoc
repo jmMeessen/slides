@@ -18,3 +18,32 @@ image::OSS_pyramid_ideal.png[]
 = La réalité...
 
 image::OSS_pyramid_reality.png[]
+
+
+= l'envie de contribuer est naturelle
+
+* Les motivations du contributeur potentiel:
+[%step]
+** enthousiasme 
+** "faire partie" d'une communauté
+** apporter sa pierre à l'édifice
+** gratitude
+** irritation
+
+= Mais...
+
+[%step]
+* Très très intimidant !
+* Intéret ponctuel de courte courte durée
+[%step]
+** boucle de feedback courte => maximum de récompense
+** ⚠️ review long 
+*** => pinailleur 🙁
+
+
+= Mise en place frustrante
+
+[%step]
+* Dépendances multiples et mal documentées
+* Dépendances ou configurations implicites
+* Pas d'automatisation
