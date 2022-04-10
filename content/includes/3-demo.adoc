@@ -1,1 +1,4 @@
+[%notitle]
 = Demo
+
+image::demo.jpeg[canvas,size=contain]

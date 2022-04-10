@@ -3,4 +3,76 @@
 
 image::gitpodLogo.png[]
 
-= What is Gitpod
+= Cloud-based Dev Environment
+
+[%step]
+* Machine de Dev dans le Cloud
+* Simple à mettre en oeuvre 
+* Plus en plus de traction 
+** Google, Facebook, Shopify, Github
+
+[NOTE.speaker]
+--
+{nbsp} - Dev in Cloud +
+{nbsp} {nbsp} {nbsp} - Ajoute du "Umpf" +
+{nbsp} {nbsp} {nbsp} - config complexes
+--
+
+= Offres courantes
+
+* Codespaces (Github - payant)
+* CodeReady Workspace (RH - nécessite OpenShift)
+* Gitpod (Free Tier intéressant)
+
+// [NOTE.speaker]
+// --
+// * 
+// --
+
+= Gitpod
+
+[%step]
+* Gratuit pour 50h/mois 
+** 2 heures/jour pendant 21 jours
+** (N'oublier pas de fermer votre session)
+* https://gitpod.io
+* Neutre ("Batteries Included")
+** Projets dans Github, Gitlab, Bitbucket
+** Intègre les outils principaux (java, maven, gradle, go, node, javascript)
+
+= "Dev Environment as Code"
+
+[%step]
+* Le plus intéressant...
+* `Gitpod.yml` définit l'environnement
+** prépare l'environnement, 
+** charge les plugins
+** Ouvre les ports
+* Versionné, reproductible et automatisé
+
+[%notitle]
+= Gitpod
+
+// image::Gitpod_overview.png[canvas,size=contain]
+image::Gitpod_overview.png[]
+
+
+
+// = Example de configuration
+
+// [source,yaml]
+// ----
+// tasks:
+//   - init: make prepare # runs during prebuild
+//     command: make run
+//   - openMode: tab-before
+
+// # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+// ports:
+//   - port: 4242
+
+// vscode:
+//   extensions:
+//     - asciidoctor.asciidoctor-vscode
+//     - streetsidesoftware.code-spell-checker
+// ----

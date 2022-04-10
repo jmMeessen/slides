@@ -1,1 +1,19 @@
+= Énorme potentiel
+
+[%step]
+* Facilite l'onboarding
+* Facilement extensible
+** Concevoir son propre container de tooling
+** Environnement de Test complexe
+* Utilisation de son IDE local 
+** VSCode
+** IntelliJ (attention uniquement version Enterprise)
+
+
 = Conclusions
+
+* Dev Env as Code
+* Extensible
+* Facile à mettre en oeuvre
+* "Task oriented development" ?
+

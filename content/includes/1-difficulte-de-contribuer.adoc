@@ -1,49 +1,87 @@
 [{invert}]
 = De la difficulté de contribuer...
 
-{nbsp} +
+
+[%notitle]
+= Open Source
+
 
 //https://techsnooper.io/avis-dexpert-le-libre-nattire-plus-lopen-source-est-devenu-trop-rentable-attention-danger/
 image::OSS-Ball.png[height=450]
 
-[%notitle]
-= OSS was a revolution
+[NOTE.speaker]
+--
 
-image::newKingmakers.jpg[canvas,size=contain]
+* Mouvement fondamental et charnière
+* Il a changé le métier du développeur. +
+{nbsp} {nbsp} Avec l'accès facile & gratuit aux technos, (plus un prolétaire)
+* A donné le pouvoir au développeur (Kingmaker)
 
-= Le contributeur...
+--
+
+= L'envie de contribuer est naturelle
+
+
+[NOTE.speaker]
+--
+Motivations:
+
+{nbsp} - enthousiasme + 
+{nbsp} - "faire partie" d'une communauté +
+{nbsp} - apporter sa pierre à l'édifice +
+{nbsp} - gratitude +
+{nbsp} - irritation
+--
+
+
+= OSS repose sur la "Communauté"
 
 image::OSS_pyramid_ideal.png[]
 
-= La réalité...
+[NOTE.speaker]
+--
+Communauté:
+
+* entraide et bienveillante
+* un être vivant
+* chacun y a sa place / une place
+* rentre et sort, évolue dans la pyramide
+--
+
+= La réalité est très souvent...
 
 image::OSS_pyramid_reality.png[]
 
+[NOTE.speaker]
+--
+* deviennent de plus en plus étroites
+* attitude de consommateurs ?
+* Challenge de recruter de nouveaux contributeurs.
+--
 
-= l'envie de contribuer est naturelle
-
-* Les motivations du contributeur potentiel:
-[%step]
-** enthousiasme 
-** "faire partie" d'une communauté
-** apporter sa pierre à l'édifice
-** gratitude
-** irritation
-
-= Mais...
+= Contribuer est ...
 
 [%step]
 * Très très intimidant !
-* Intéret ponctuel de courte courte durée
-[%step]
-** boucle de feedback courte => maximum de récompense
-** ⚠️ review long 
-*** => pinailleur 🙁
+* Intérêt ponctuel de courte courte durée
+* Mise en place frustrante
 
 
-= Mise en place frustrante
+[NOTE.speaker]
+--
+{nbsp} - boucle de feedback courte => maximum de récompense +
+{nbsp} {nbsp} {nbsp} -  ⚠️ review long => pinailleur 🙁
 
-[%step]
-* Dépendances multiples et mal documentées
-* Dépendances ou configurations implicites
-* Pas d'automatisation
+'''
+
+{nbsp} - Dépendances multiples, mal documentées, implicite +
+{nbsp} - Souvent pas d'automatisation +
+{nbsp} - environnement local fragile, +
+{nbsp} {nbsp} {nbsp} - nécessite  effort constant de maintenance +
+{nbsp} {nbsp} {nbsp} => distraction +
+{nbsp} - variations infinies d'OS et de versions d'appli/librairies
+
+* exemple: .gitconfig for git-plugin (default branch name)
+--
+
+

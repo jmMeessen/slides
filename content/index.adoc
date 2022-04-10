@@ -1,13 +1,15 @@
-[%notitle]
-= Gitpod
 include::./attributes.adoc[]
 
-Présentation à **Devoxx France**
+// Présentation à **Devoxx France**
+// Avril 2022
 
-Avril 2022
+// [NOTE.speaker]
+// --
+// * 
+// --
 
 [%notitle]
-== title picture
+== Titre DevoxxFR-2022
 
 
 image::devoxx22-title.png[canvas,size=contain]
@@ -17,17 +19,37 @@ image::devoxx22-title.png[canvas,size=contain]
 
 image::interested-astonished-face-760.jpeg[canvas,size=contain]
 
+[NOTE.speaker]
+--
+* Waouw !
+* Ça a l'air génial. J'ai envie de l'utiliser.
+* Ooh il y a un glitch. J'ai envie de proposer une correction.
+--
+
 [%notitle]
 == Something happened
 
 image::SomethingHappened.jpg[canvas,size=contain]
+
+[NOTE.speaker]
+--
+* Ooops. Ça pas l'air aussi simple...
+* Et en plus je dois installer cette version là du Shtroumpf API
+* J'arrive même pas à faire fonctionner l'environnement de Dev. 
+* Ça marche pas leur truc.
+--
 
 [%notitle]
 == Disappointment
 
 image::cheetah-rain.gif[canvas,size=contain]
 
-
+[NOTE.speaker]
+--
+* Déception...
+* Découragement...
+* C'est pas pour moi, je passe...
+--
 
 [{invert}]
 == Gitpod
@@ -37,8 +59,12 @@ La fin des frictions inutiles pour contribuer à un projet OSS ?
 image::qrcode.png[]
 
 [.small]
-Presentation disponnible sur: `{presentationUrl}[{presentationUrl}]`
+Présentation disponible sur: `{presentationUrl}[{presentationUrl}]`
 
+[NOTE.speaker]
+--
+* J'ai l'impression qu'un produit comme Gitpod devrait pouvoir aider.
+--
 
 [{invert}]
 == Hello !!
@@ -46,7 +72,7 @@ Presentation disponnible sur: `{presentationUrl}[{presentationUrl}]`
 {nbsp} +
 
 * **Jean-Marc MEESSEN**
-** Belge (bières et chocolats)
+** Belge (frites, bières et chocolats)
 ** Jenkins Developer Relations {nbsp} {nbsp} image:jenkins_logo_small.png[height=80, role="right"] +
 Sponsored by  {nbsp} image:cloudbees-logo-full.png[height=50, float="right"]
 
@@ -58,13 +84,31 @@ Sponsored by  {nbsp} image:cloudbees-logo-full.png[height=50, float="right"]
 [.small]
 * +++<span class="far fa-envelope"></span>+++ `jean-marc@meessen-web.org`
 
+
+[NOTE.speaker]
+--
+* Mais ça paie pas vraiment.
+* J'ai donc un autre job...
+--
+
 == !
 
 image::fishSticks.jpg[canvas,size=contain]
 
+[NOTE.speaker]
+--
+* Vous pourrez me trouver dans vos surgélateurs
+--
+
 == !
 
-video::CaptainIglo.mp4[ video, width=800, options=autoplay,poster="fishSticks.jpg"]
+video::CaptainIglo.mp4[ video, width=800, options=autoplay,poster="captain-iglo-movie.png"]
+
+[NOTE.speaker]
+--
+* Il fait trop chaud pour des bâtonnets, j'ai apporté des chocolats de Belgique
+* En hivers, je met un bonnet rouge et je fais "ho-ho-ho"
+--
 
 
 :leveloffset: +1
@@ -81,7 +125,7 @@ include::./includes/4-conclusions.adoc[]
 
 [{invert}]
 // == And before we go...
-== Et rappellez-vous...
+== Et rappelez-vous...
 
 image:imposterSyndrom.jpeg[]
 
