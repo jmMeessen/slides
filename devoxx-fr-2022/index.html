@@ -423,13 +423,27 @@ Sponsored by  &#160; <span class="image" style="float: right"><img src="media/cl
 <section id="mais"><h2>Mais&#8230;&#8203;</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Très très intimidant !</p></li><li class="fragment"><p>Intéret ponctuel de courte courte durée</p></li><li class="fragment"><p>Mise en place frustrante</p><div class="ulist"><ul><li class="fragment"><p>Dépendances multiples et mal documentées</p></li><li class="fragment"><p>Dépendances ou configurations implicites</p></li><li class="fragment"><p>Souvent pas d&#8217;automatisation</p></li></ul></div></li></ul></div>
 <aside class="notes"><div class="ulist small"><ul><li><p>boucle de feedback courte &#8658; maximum de récompense</p></li><li><p>⚠️ review long</p><div class="ulist"><ul><li><p>&#8658; pinailleur 🙁</p></li></ul></div></li><li><p>exemple: .gitconfig for git-plugin</p></li></ul></div></aside></div></section>
 <section id="gitpod_2"><div class="slide-content"><div class="imageblock"><img src="media/gitpodLogo.png" alt="gitpodLogo"></div></div></section>
-<section id="cloud_based_dev_environment"><h2>Cloud-based Dev Environment</h2><div class="slide-content"><div class="ulist"><ul><li><p>Machine de Dev dans le Cloud</p></li><li><p>Additional "Umpf"</p><div class="ulist"><ul><li><p>config complexes</p></li></ul></div></li><li><p>Simple à mettre en oeuvre</p></li><li><p>Populaire (Google, Facebook, Shopify, Github)</p></li></ul></div></div></section>
+<section id="cloud_based_dev_environment"><h2>Cloud-based Dev Environment</h2><div class="slide-content"><div class="ulist"><ul><li><p>Machine de Dev dans le Cloud</p></li><li><p>Additional "Umpf"</p><div class="ulist"><ul><li><p>config complexes</p></li></ul></div></li><li><p>Simple à mettre en oeuvre</p><div class="ulist"><ul><li><p>bouton dans Chrome, Firefox</p></li><li><p>Préfixer le repo avec &#8230;&#8203;???</p></li></ul></div></li><li><p>Populaire (Google, Facebook, Shopify, Github)</p></li></ul></div></div></section>
 <section id="offres_courantes"><h2>Offres courantes</h2><div class="slide-content"><div class="ulist"><ul><li><p>Codespaces (Github - payant)</p></li><li><p>CodeReady Workspace (RH - nécessite OpenShift)</p></li><li><p>Gitpod (Free Tier intéressant)</p></li></ul></div></div></section>
 <section id="gitpod_3"><h2>Gitpod</h2><div class="slide-content"><div class="ulist"><ul><li><p>Gratuit pour 50h/mois</p><div class="ulist"><ul><li><p>2 heures/jour pendant 21 jours</p></li><li><p>(N&#8217;oublier pas de fermer votre session)</p></li></ul></div></li><li><p>neutre</p><div class="ulist"><ul><li><p>Github, Gitlab, Bitbucket</p></li><li><p>intègre les outils principaux (java, maven, gradle, go, node, javascript)</p></li></ul></div></li></ul></div></div></section>
 <section id="gitpod_4"><div class="slide-content"><div class="imageblock"><img src="media/Gitpod_overview.png" alt="Gitpod overview"></div></div></section>
-<section id="dev_environment_as_code"><h2>"Dev Environment as Code"</h2></section>
-<section id="demo"><h2>Demo</h2></section>
-<section id="conclusions"><h2>Conclusions</h2></section>
+<section id="dev_environment_as_code"><h2>"Dev Environment as Code"</h2><div class="slide-content"><div class="ulist"><ul><li><p>Le plus intéressant&#8230;&#8203;</p></li><li><p><code>Gitpod.yml</code> définit les dépendances</p><div class="ulist"><ul><li><p>prépare l&#8217;environement,</p></li><li><p>charge les plugins</p></li><li><p>Ouvre les ports</p></li></ul></div></li></ul></div></div></section>
+<section id="example_de_configuration"><h2>Example de configuration</h2><div class="slide-content"><div class="listingblock"><div class="content"><pre class="highlightjs highlight"><code class="language-yaml hljs" data-noescape="true" data-lang="yaml">tasks:
+  - init: make prepare # runs during prebuild
+    command: make run
+  - openMode: tab-before
+
+# List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
+ports:
+  - port: 4242
+
+vscode:
+  extensions:
+    - asciidoctor.asciidoctor-vscode
+    - streetsidesoftware.code-spell-checker</code></pre></div></div></div></section>
+<section id="task"><h2>Task</h2></section>
+<section id="demo" data-background-image="media/demo.jpeg" data-background-size="contain"></section>
+<section id="conclusions"><h2>Conclusions</h2><div class="slide-content"><div class="ulist"><ul><li><p>Vais l&#8217;utiliser de plus en plus</p></li><li><p>Dev enviroment as Code</p></li><li><p>Extensible</p></li><li><p>Task oriented development.</p></li></ul></div></div></section>
 <section id="et_rappellez_vous" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Et rappellez-vous&#8230;&#8203;</h2><div class="slide-content"><div class="paragraph"><p><span class="image"><img src="media/imposterSyndrom.jpeg" alt="imposterSyndrom"></span></p></div></div></section>
 <section id="merci_de_votre_attention" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Merci de votre attention !</h2><div class="slide-content"><div class="imageblock"><img src="media/capt_igloo_cleaned.jpg" alt="capt igloo cleaned" height="150"></div>
 <div class="paragraph"><p><a href="https://twitter.com/JM_Meessen"><span class="fab fa-twitter"></span> @JM_Meessen</a></p></div>
