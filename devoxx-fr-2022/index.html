@@ -394,11 +394,11 @@ link.type = 'text/css';
 link.href = window.location.search.match( /print-pdf/gi ) ? "./reveal.js/css/print/pdf.css" : "./reveal.js/css/print/paper.css";
 document.getElementsByTagName( 'head' )[0].appendChild( link );</script></head><body><div class="reveal"><div class="slides"><section id="title_picture" data-background-image="media/devoxx22-title.png" data-background-size="contain"></section>
 <section id="surprise" data-background-image="media/interested-astonished-face-760.jpeg" data-background-size="contain"><div class="slide-content">
-<aside class="notes"><div class="ulist small"><ul><li><p>Waouw !</p></li><li><p>Ça a l&#8217;air génial. J&#8217;ai envie de l&#8217;utiliser.</p></li><li><p>Ooh il y a un glitch. J&#8217;ai envie de proposer une correction.</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>Waouw !</p></li><li><p>Ça a l&#8217;air génial. J&#8217;ai envie de l&#8217;utiliser.</p></li><li><p>Ooh il y a un glitch. J&#8217;ai envie de proposer une correction.</p></li></ul></div></aside></div></section>
 <section id="something_happened" data-background-image="media/SomethingHappened.jpg" data-background-size="contain"><div class="slide-content">
-<aside class="notes"><div class="ulist small"><ul><li><p>Ooops. Ça pas l&#8217;air aussi simple&#8230;&#8203;</p></li><li><p>J&#8217;arrive même pas à faire fonctionner l&#8217;environnement de Dev.</p></li><li><p>Ça marche pas ce truc.</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>Ooops. Ça pas l&#8217;air aussi simple&#8230;&#8203;</p></li><li><p>J&#8217;arrive même pas à faire fonctionner l&#8217;environnement de Dev.</p></li><li><p>Ça marche pas ce truc.</p></li></ul></div></aside></div></section>
 <section id="disappointment" data-background-image="media/cheetah-rain.gif" data-background-size="contain"><div class="slide-content">
-<aside class="notes"><div class="ulist small"><ul><li><p>Déception&#8230;&#8203;</p></li><li><p>C&#8217;est pas pour moi, je passe&#8230;&#8203;</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>Déception&#8230;&#8203;</p></li><li><p>C&#8217;est pas pour moi, je passe&#8230;&#8203;</p></li></ul></div></aside></div></section>
 <section id="gitpod" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>Gitpod</h2><div class="slide-content"><div class="paragraph"><p>La fin des frictions inutiles pour contribuer à un projet OSS ?</p></div>
 <div class="imageblock"><img src="media/qrcode.png" alt="qrcode"></div>
 <div class="paragraph small"><small>Présentation disponible sur: <code><a href="https://jmMeessen.github.io/slides/devoxx-fr-2022">https://jmMeessen.github.io/slides/devoxx-fr-2022</a></code></small></div></div></section>
@@ -412,22 +412,39 @@ Sponsored by  &#160; <span class="image" style="float: right"><img src="media/cl
 <section id="de_la_difficulté_de_contribuer" data-background-color="BLANCHEDALMOND" data-state="invert"><h2>De la difficulté de contribuer&#8230;&#8203;</h2><div class="slide-content"><div class="paragraph"><p>&#160;<br></p></div>
 <div class="imageblock"><img src="media/OSS-Ball.png" alt="OSS Ball" height="450"></div></div></section>
 <section id="oss_was_a_revolution"><div class="slide-content"><div class="imageblock"><img src="media/cathedral_and_kingmakers.png" alt="cathedral and kingmakers"></div>
-<aside class="notes"><div class="ulist small"><ul><li><p>Mouvement fondamental et charnière</p></li><li><p>Il a changé le métier du développeur.</p><div class="ulist"><ul><li><p>En facilitant l&#8217;accès facile et gratuit aux technologies, il a pris le pouvoir.</p></li></ul></div></li><li><p>Repose sur le concept de Communauté</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>Mouvement fondamental et charnière</p></li><li><p>Il a changé le métier du développeur.<br>
+&#160; Avec l&#8217;accès facile et gratuit aux technos, il a pris le pouvoir.</p></li><li><p>Repose sur le concept de Communauté</p></li></ul></div></aside></div></section>
 <section id="le_contributeur"><h2>Le contributeur&#8230;&#8203;</h2><div class="slide-content"><div class="imageblock"><img src="media/OSS_pyramid_ideal.png" alt="OSS pyramid ideal"></div>
-<aside class="notes"><div class="ulist small"><ul><li><p>avant tout une communauté</p></li><li><p>chacun y a sa place</p></li><li><p>rentre et sort, évolue dans la pyramide</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>avant tout une communauté</p></li><li><p>chacun y a sa place</p></li><li><p>rentre et sort, évolue dans la pyramide</p></li></ul></div></aside></div></section>
 <section id="la_réalité"><h2>La réalité&#8230;&#8203;</h2><div class="slide-content"><div class="imageblock"><img src="media/OSS_pyramid_reality.png" alt="OSS pyramid reality"></div>
-<aside class="notes"><div class="ulist small"><ul><li><p>deviennent de plus en plus étroites</p></li><li><p>attitude de consommateurs</p></li><li><p>Challenge de recruter de nouveaux contributeurs.</p></li></ul></div></aside></div></section>
-<section id="lenvie_de_contribuer_est_naturelle"><h2>L&#8217;envie de contribuer est naturelle</h2><div class="slide-content"><aside class="notes"><div class="paragraph small"><small>Motivations:</small></div>
-<div class="ulist"><ul><li><p>enthousiasme</p></li><li><p>"faire partie" d&#8217;une communauté</p></li><li><p>apporter sa pierre à l&#8217;édifice</p></li><li><p>gratitude</p></li><li><p>irritation</p></li></ul></div></aside></div></section>
+<aside class="notes"><div class="ulist"><ul><li><p>deviennent de plus en plus étroites</p></li><li><p>attitude de consommateurs</p></li><li><p>Challenge de recruter de nouveaux contributeurs.</p></li></ul></div></aside></div></section>
+<section id="lenvie_de_contribuer_est_naturelle"><h2>L&#8217;envie de contribuer est naturelle</h2><div class="slide-content"><aside class="notes"><div class="paragraph"><p>Motivations:</p></div>
+<div class="paragraph"><p>&#160; - enthousiasme<br>
+&#160; - "faire partie" d&#8217;une communauté<br>
+&#160; - apporter sa pierre à l&#8217;édifice<br>
+&#160; - gratitude<br>
+&#160; - irritation</p></div></aside></div></section>
 <section id="mais"><h2>Mais&#8230;&#8203;</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Très très intimidant !</p></li><li class="fragment"><p>Intérêt ponctuel de courte courte durée</p></li><li class="fragment"><p>Mise en place frustrante</p></li></ul></div>
-<aside class="notes"><div class="ulist small"><ul><li><p>boucle de feedback courte &#8658; maximum de récompense</p><div class="ulist"><ul><li><p>⚠️ review long &#8658; pinailleur 🙁</p></li></ul></div></li></ul></div>
+<aside class="notes"><div class="paragraph"><p>&#160; - boucle de feedback courte &#8658; maximum de récompense<br>
+&#160; &#160; &#160; -  ⚠️ review long &#8658; pinailleur 🙁</p></div>
 <hr>
-<div class="ulist"><ul><li><p>Dépendances multiples et mal documentées</p></li><li><p>Dépendances ou configurations implicites</p></li><li><p>Souvent pas d&#8217;automatisation</p></li><li><p>environnement local fragile, nécessite un effort constant de maintenance</p><div class="ulist"><ul><li><p>&#8658; distraction</p></li></ul></div></li><li><p>variations infinies d&#8217;OS et de versions d&#8217;appli/librairies</p></li><li><p>exemple: .gitconfig for git-plugin (default branch name)</p></li></ul></div></aside></div></section>
+<div class="paragraph"><p>&#160; - Dépendances multiples et mal documentées<br>
+&#160; - Dépendances ou configurations implicites<br>
+&#160; - Souvent pas d&#8217;automatisation<br>
+&#160; - environnement local fragile,<br>
+&#160; &#160; &#160; - nécessite  effort constant de maintenance<br>
+&#160; &#160; &#160; &#8658; distraction<br>
+&#160; - variations infinies d&#8217;OS et de versions d&#8217;appli/librairies</p></div>
+<div class="ulist"><ul><li><p>exemple: .gitconfig for git-plugin (default branch name)</p></li></ul></div></aside></div></section>
 <section id="gitpod_2"><div class="slide-content"><div class="imageblock"><img src="media/gitpodLogo.png" alt="gitpodLogo"></div></div></section>
 <section id="cloud_based_dev_environment"><h2>Cloud-based Dev Environment</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Machine de Dev dans le Cloud</p></li><li class="fragment"><p>Simple à mettre en oeuvre</p></li><li class="fragment"><p>Plus en plus de traction</p><div class="ulist"><ul><li><p>Google, Facebook, Shopify, Github</p></li></ul></div></li></ul></div>
-<aside class="notes"><div class="ulist small"><ul><li><p>Dev in Cloud</p><div class="ulist"><ul><li><p>Ajoute du "Umpf"</p></li><li><p>config complexes</p></li></ul></div></li></ul></div>
+<aside class="notes"><div class="paragraph"><p>&#160; - Dev in Cloud<br>
+&#160; &#160; &#160; -  Ajoute du "Umpf"<br>
+&#160; &#160; &#160; - config complexes</p></div>
 <hr>
-<div class="ulist"><ul><li><p>mise en oeuvre simple</p><div class="ulist"><ul><li><p>bouton dans Chrome, Firefox</p></li><li><p>Préfixer le repo Git avec <code>gitpod.io/#</code></p></li></ul></div></li></ul></div></aside></div></section>
+<div class="paragraph"><p>&#160; - mise en oeuvre simple<br>
+&#160; -  bouton dans Chrome, Firefox<br>
+&#160; &#160; &#160; - Préfixer le repo Git avec <code><a href="https://gitpod.io/#" class="bare">https://gitpod.io/#</a></code></p></div></aside></div></section>
 <section id="offres_courantes"><h2>Offres courantes</h2><div class="slide-content"><div class="ulist"><ul><li><p>Codespaces (Github - payant)</p></li><li><p>CodeReady Workspace (RH - nécessite OpenShift)</p></li><li><p>Gitpod (Free Tier intéressant)</p></li></ul></div></div></section>
 <section id="gitpod_3"><h2>Gitpod</h2><div class="slide-content"><div class="ulist"><ul><li class="fragment"><p>Gratuit pour 50h/mois</p><div class="ulist"><ul><li><p>2 heures/jour pendant 21 jours</p></li><li><p>(N&#8217;oublier pas de fermer votre session)</p></li></ul></div></li><li class="fragment"><p>Neutre ("Batteries Included")</p><div class="ulist"><ul><li><p>Github, Gitlab, Bitbucket</p></li><li><p>Intègre les outils principaux (java, maven, gradle, go, node, javascript)</p></li></ul></div></li><li class="fragment"><p>Visual Studio Code (Web)</p></li><li class="fragment"><p><a href="https://gitpod.io" class="bare">https://gitpod.io</a></p></li></ul></div></div></section>
 <section id="gitpod_4"><div class="slide-content"><div class="imageblock"><img src="media/Gitpod_overview.png" alt="Gitpod overview"></div></div></section>
