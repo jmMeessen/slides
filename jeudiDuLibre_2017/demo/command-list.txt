@@ -1,0 +1,25 @@
+docker images
+docker pull alpine:3.5
+docker images # Quelles différences ?
+docker pull alpine:latest
+docker images # Quelles différences ?
+docker tag alpine:3.5 my-alpine:3.5.0-local
+docker images # Quelles différences ?
+docker ps
+docker run alpine:latest echo "Bonjour depuis un containeur"
+cat /etc/os-release
+docker run -ti alpine:3.4 /bin/sh
+cat /etc/os-release
+whoami
+ps aux
+exit
+docker run -ti debian:jessie /nin/sh
+docker run -d nginx:1.10-alpine
+docker run -d --name webserver-1 nginx:1.10-alpine
+docker ps
+docker ps -a
+docker stop webserver-1
+
+
+
+

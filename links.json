@@ -1,10 +1,30 @@
 [
   {
-    "name": "DevoXX France: Gitpod (2022)",
+    "name": "DevoXX France (2022): Gitpod",
     "link": "devoxx-fr-2022"
   },
   {
-    "name": "DevOps World Lisbon: Automating Jenkins (re)installation: some thoughts, tips and tricks (2019)",
+    "name": "DevOps World Lisbon (2019): Automating Jenkins (re)installation: some thoughts, tips and tricks",
     "link": "jw-eu-2019"
+  },
+  {
+    "name": "Les Jeudis du Libre (2017): What is this \"Docker\" ?",
+    "link": "jeudiDuLibre_2017"
+  },
+  {
+    "name": "Swift (2016): What is this \"Docker\" ?",
+    "link": "whatIsDocker_swift"
+  },
+  {
+    "name": "techForum WL (2016): Docker in Production ? And what about Security ... ?",
+    "link": "techForum_2016"
+  },
+  {
+    "name": "Breizcamp (2016): Docker en Production ? Et la Sécurité ... ?",
+    "link": "breizhcamp_2016"
+  },
+  {
+    "name": "BruJug (2016): What is this \"Docker\" ?",
+    "link": "bruJug_2016"
   }
 ]
