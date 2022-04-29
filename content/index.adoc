@@ -9,10 +9,10 @@ include::./attributes.adoc[]
 // --
 
 [%notitle]
-== Titre DevoxxFR-2022
+== Demo presentation
 
 
-image::devoxx22-title.png[canvas,size=contain]
+// image::devoxx22-title.png[canvas,size=contain]
 
 [%notitle]
 == Surprise
