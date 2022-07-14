@@ -35,7 +35,7 @@ with a live-reloading capability
 to get a WYSIWYG experience:
 
 ** Clone the repository
-** Run the following `make` command:
+** Run the following `make` command: 
 +
 [source,bash]
 ----
@@ -84,3 +84,10 @@ make shell
 /app # ncu -u
 ...
 ----
+
+== To start a new presentation
+
+Just create and push a new branch.
+The new presentation will be built and available at https://jmmeessen.github.io/slides/branch_name.
+
+TODO: explain how to publish the final presentation, update the presentation index and prepare for the next presentation.
