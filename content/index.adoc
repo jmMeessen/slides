@@ -1,7 +1,7 @@
 include::./attributes.adoc[]
 
-// Présentation à **Devoxx France**
-// Avril 2022
+// Presentation at **Devops World**
+// September 2022
 
 // [NOTE.speaker]
 // --
